@@ -1992,3 +1992,14 @@ margin-top: 40px; z-index:190; }
     font-weight: 300;
 }
 .navbar .navbar-inner .navbar-header .navbar-account .account-area>li .dropdown-menu.dropdown-messages li .message-body {max-height:inherit !Important; }
+input[type=checkbox]~.text, input[type=radio]~.text {
+    position: relative;
+    z-index: 11;
+    display: inline-block;
+    margin: 0;
+    line-height: 20px;
+    min-height: 18px;
+    min-width: 18px;
+    font-weight: normal;
+    text-align: justify;
+}
