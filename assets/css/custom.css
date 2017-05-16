@@ -2008,4 +2008,4 @@ input[type=checkbox]~.text, input[type=radio]~.text {
     font-weight: normal;
     text-align: justify;
 }
-#popover603163
+.setting { display:none;}
