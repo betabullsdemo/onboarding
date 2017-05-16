@@ -1615,7 +1615,7 @@ margin-top: 40px; z-index:190; }
     display: block !important;
 }
 
-.navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area .avatar {margin-right:100px;}
+.navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area .avatar {margin-right:20px;}
 .navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area {height:auto !important;}
 .navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area section h2 span {color:#000;}
 .page-breadcrumbs {min-height:62px;}
@@ -1687,6 +1687,11 @@ margin-top: 40px; z-index:190; }
     margin: 0px !important;
 }
  .state3rd-pad-left45{padding-left:28px !important;}
+ .databox {height:80px;}
+ .databox .databox-left[class*="bg-"] {height:80px;}
+ .databox .databox-piechart {padding-top:5px;}
+ .dashboard-box {overflow:hidden;}
+.page-sidebar.hide~.page-content {margin-left:0px !important;}
  }
  @media (max-width: 991px) {
  .nopaddingleft{
@@ -2003,3 +2008,4 @@ input[type=checkbox]~.text, input[type=radio]~.text {
     font-weight: normal;
     text-align: justify;
 }
+#popover603163
