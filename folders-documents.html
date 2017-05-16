@@ -810,15 +810,14 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                                                 <td>
                                                 2
 												</td>
-												<td style="text-align:left;">
-												<i class="fa fa-folder-open folder-color"></i>
-													&nbsp;Test
+												<td style="text-align:left;"><i class="fa fa-file-text-o file-color"></i> 
+													Affirmative
 												</td>
 												<td style="text-align:left;">
-													General
+													PDF
 												</td>
 												<td style="text-align:left;">
-													<a href="javascript:void(0);" class="" data-toggle="modal" data-target=".AccessUsers" data-placement="top" data-original-title="List of Users" aria-describedby="tooltip797909">List of Users</a>
+													<a href="javascript:void(0);" class="" data-toggle="modal" data-target=".AccessUsers" data-placement="top" data-original-title="List of Users" aria-describedby="tooltip797909">superadmin@betabulls.com</a>
 												</td>
 												<td>
 													1-30-2017
@@ -840,14 +839,14 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                                                 1
 												</td>
 												<td style="text-align:left;">
-												<i class="fa fa-file-text-o file-color"></i>
-													Title1
+												<i class="fa fa-file-text-o file-color"></i> 
+													Notification List
 												</td>
 												<td style="text-align:left;">
-													General
+													Excel
 												</td>
 												<td style="text-align:left;">
-													<a href="javascript:void(0);" class="" data-toggle="modal" data-target=".AccessUsers" data-placement="top" data-original-title="List of Users" aria-describedby="tooltip797909">List of Users</a>
+													<a href="javascript:void(0);" class="" data-toggle="modal" data-target=".AccessUsers" data-placement="top" data-original-title="List of Users" aria-describedby="tooltip797909">manager@betabulls.com</a>
 												</td>
 												<td>
 													1-28-2017
@@ -991,7 +990,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-5 col-md-2 col-sm-offset-1 col-lg-2 col-xs-12 col-md-offset-3 col-lg-offset-3 control-label no-padding-right">Document/Folder Name :</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-select form-control" id="txtFolderName" style="margin-bottom:8px;" placeholder="Folder/File Name">
+                            <input type="text" class="form-select form-control" id="txtFolderName" style="margin-bottom:8px;" placeholder="Affirmative">
                         </div>
                     </div>
                     <div class="form-group" id="divEditFileType" hidden="" style="display: block;">
@@ -1000,7 +999,8 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                             <select class="form-select form-control" id="categoryTypeEdit" style="margin-bottom:8px;">
                                 <option value="Select">--Select Type--</option>
                                 <option value="General">General</option>
-                                <option value="Policy">Policy</option>
+                                <option value="Pdf" selected>PDF</option>
+								<option value="Excel">Excel</option>
                             </select>
                         </div>
                     </div>
@@ -1013,7 +1013,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-5 col-md-2 col-sm-offset-1 col-lg-2 col-xs-6 col-md-offset-3 col-lg-offset-3 control-label employee-inputcol">Created Date :</label>
                         <div class="col-sm-6 col-xs-6">
-                            <label style="float:left;" class="control-label" id="lblCreatedDate">01-17-2017</label>
+                            <label style="float:left;" class="control-label" id="lblCreatedDate">1-30-2017</label>
                         </div>
                     </div>
                     <div class="form-group">
@@ -1164,7 +1164,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <script type="text/javascript">
         $(document).ready(function () {
         
-            $('.navbar').css('z-index', '200');
+            
             $('#optFile').change(function () {
                 if ($('#optFile').val() == 1) {
                     $('#divFileType').show();

@@ -1625,7 +1625,7 @@ margin-top: 40px; z-index:190; }
  .navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area {min-width:100px !important; width:auto !important;}
  .navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area {padding-right:20px;}
 
- .navbar .navbar-inner .navbar-header .navbar-account .account-area>li.open .dropdown-menu {left:0px; min-width:186px; width:auto;}
+ .navbar .navbar-inner .navbar-header .navbar-account .account-area>li.open .dropdown-menu {left:0px; min-width:210px; width:auto;}
 
  .navbar .navbar-inner .navbar-header .navbar-account .account-area>li .dropdown-arrow:before {display:none;}
  .toop-top{z-index:999999 !important}
@@ -1870,7 +1870,7 @@ margin-top: 40px; z-index:190; }
 }
 .navbar .navbar-inner .navbar-header .navbar-account .account-area>li .dropdown-menu.dropdown-messages li .message-time {position:static !Important;}
 
-.navbar .navbar-inner .navbar-header .navbar-account .account-area>li .dropdown-menu.dropdown-messages li .message {width:120px !Important}
+.navbar .navbar-inner .navbar-header .navbar-account .account-area>li .dropdown-menu.dropdown-messages li .message {width:140px !Important}
 
 
 @media screen and (max-width: 767px) {
@@ -1991,3 +1991,4 @@ margin-top: 40px; z-index:190; }
     font-size: 14px;
     font-weight: 300;
 }
+.navbar .navbar-inner .navbar-header .navbar-account .account-area>li .dropdown-menu.dropdown-messages li .message-body {max-height:inherit !Important; }
