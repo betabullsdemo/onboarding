@@ -6,17 +6,16 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
 -->
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <!-- Head -->
 <head>
     <meta charset="utf-8" />
-    <title>Add Filing Status</title>
+    <title>Manager Profile</title>
 
-    <meta name="description" content="blank page" />
+    <meta name="description" content="user profile" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 
     <!--Basic Styles-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -25,8 +24,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <link href="assets/css/weather-icons.min.css" rel="stylesheet" />
 
     <!--Fonts-->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300"
-          rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
 
     <!--Beyond styles-->
     <link id="beyond-link" href="assets/css/beyond.min.css" rel="stylesheet" />
@@ -35,31 +33,25 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <link href="assets/css/animate.min.css" rel="stylesheet" />
     <link href="assets/css/custom.css" rel="stylesheet" />
     <link id="skin-link" href="" rel="stylesheet" type="text/css" />
-	
-	
 
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
     <script src="assets/js/skins.min.js"></script>
-	
 	<style>
-		::-webkit-input-placeholder {
-   color: #888 !important;
-}
+		body {
+            margin-bottom: 70px;
+        }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: #888 !important;  
-}
+        .tab-content {
+            background-color: #fff;
+        }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #888 !important;  
-}
+        .profile-container .profile-body .nav-tabs.tabs-flat {
+            background-color: #fff;
+        }
 
-:-ms-input-placeholder {  
-   color: #888;  
-}
-
-.form-horizontal .form-group {margin-bottom:8px;}
-.form-horizontal .control-label {text-align:left;}
+        .profile-container .profile-header {
+            background-color: #fff;
+        }
 	</style>
 </head>
 <!-- /Head -->
@@ -70,7 +62,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
         <div class="loader"></div>
     </div>
     <!--  /Loading Container -->
-    <!-- Navbar -->
+   <!-- Navbar -->
     <div class="navbar">
         <div class="navbar-inner">
             <div class="navbar-container">
@@ -321,13 +313,13 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                                         <img src="assets/img/avatars/adam-jansen.jpg">
                                     </div>
                                     <section>
-                                    <h2><span class="profile"><span id="ProfileName"></span>Super Admin</span></h2>
+                                    <h2><span class="profile"><span id="ProfileName">Manager</span></span></h2>
                                 </section>
                             </a>
                             <!--Login Area Dropdown-->
                             <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
                                 <li class="username"><a></a></li>
-                                <li class="email"><a id="UserEmail" style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">onboardsuperuser@gmail.com</a></li>
+                                <li class="email"><a id="UserEmail" style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">manager@betabulls.com</a></li>
                                     <!--Avatar Area-->
                                     <li>
                                         <div class="avatar-area">
@@ -337,7 +329,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                                     </li>
                                     <!--Avatar Area-->
                                     <li class="edit">
-                                        <a href="profile.html" class="pull-left">Profile</a>
+                                        <a href="profile-manager.html" class="pull-left">Profile</a>
                                         <!-- <a href="#" class="pull-right">Setting</a> -->
                                     </li>
                                     <!--Theme Selector Area-->
@@ -409,26 +401,19 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
             <!-- Page Sidebar -->
             <div class="page-sidebar" id="sidebar">
                 <!-- Page Sidebar Header-->
+                
 				<div class="sidebar-header-wrapper">
-        <div class="form-group" id="OnlyIndex">
-            <div class="">
-                <select class="form-control" style="border-radius:0px;">
-                    <option value="0">Select Client...</option>
-                    <option value="1">Client 01</option>
-                    <option value="2">Client 02</option>
-                    <option value="3">Client 03</option>
-                    <option value="4">Client 04</option>
-                    <option value="5">Client 05</option>
-                </select>
-            </div>
-        </div>
-    </div>
+					<div style="" id="ExceptIndex">
+						<input type="text" class="searchinput">
+						<i class="searchicon fa fa-search"></i>
+					</div>
+				</div>
                 <!-- /Page Sidebar Header -->
                 <!-- Sidebar Menu -->
-<ul class="nav sidebar-menu" id="All">
+                <ul class="nav sidebar-menu" id="All">
        
         <li>
-            <a href="index-superadmin.html">
+            <a href="index-manager.html">
                 <i class="menu-icon glyphicon glyphicon-home" style="color:#2dc3e8"></i>
                 <span class="menu-text"> Dashboard </span>
             </a>
@@ -442,9 +427,10 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="managemanagers.html">
+                    <a href="managemanagersmanager.html">
                         <span class="menu-text">Manage Users</span>
                     </a>
+                   
                 </li>
             </ul>
         </li>
@@ -456,23 +442,23 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <i class="menu-expand"></i>
             </a>
             <ul class="submenu">
-                <li>
+                <!-- <li>
                     <a href="folders-documents.html" class="menu-dropdown">
                         <span class="menu-text">
                             My Documents
                         </span>
                     </a>
-                </li>
-                <li>
-                    <a href="sharedwithme.html" class="menu-dropdown">
+                </li> -->
+                 <li>
+                    <a href="sharedwithmemanager.html" class="menu-dropdown">
                         <span class="menu-text">Shared With Me</span>
                     </a>
-                </li>
+                </li> 
                 
             </ul>
         </li>
         
-        <li class="open">
+        <!--<li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-cogs" style="color:#FF8F32;"></i>
                 <span class="menu-text"> System Administration </span>
@@ -485,7 +471,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                         <span class="menu-text">Manage Clients</span>
                     </a>
                 </li>
-                
+               
                 <li>
                     <a href="managestate.html">
                         <span class="menu-text">Manage States</span>
@@ -496,7 +482,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                         <span class="menu-text">Manage Races</span>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="filingstatus.html">
                         <span class="menu-text">Filing Status</span>
                     </a>
@@ -511,11 +497,11 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                         <span class="menu-text">Manage I9 Documents</span>
                     </a>
                 </li>
-                <!-- <li>
+                <li>
                     <a href="#">
                         <span class="menu-text">Manage I9 Validations</span>
                     </a>
-                </li> -->
+                </li>
                 <li>
                     <a href="managestages.html">
                         <span class="menu-text">Manage Stages</span>
@@ -566,6 +552,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 </li>
             </ul>
         </li>
+        
         <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-exclamation-triangle" style="color:#AC193D;"></i>
@@ -578,20 +565,15 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                         <span class="menu-text">Manage Notifications</span>
                     </a>
                 </li>
-				<li>
-                    <a href="notification-settings.html">
-                        <span class="menu-text">Notification Settings</span>
-                    </a>
-                </li>
             </ul>
         </li>
-<li>
+        <!--li>
             <a href="preonboarding.html" class="menu-dropdown">
                 <i class="menu-icon fa fa-users" style="color:#53a93f;"></i>
                 <span class="menu-text">Pre-Onboarding</span>
             </a>
         </li>
-        <!--li>
+        <li>
             <a href="onboardinglist.html">
                 <i class="menu-icon fa fa-list" style="color:#03B3B2;"></i>
                 <span class="menu-text"> Onboarding List </span>
@@ -606,79 +588,79 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="i9categories-superadmin.html" class="menu-dropdown">
+                    <a href="i9categories.html" class="menu-dropdown">
                         <i class="fa fa-list" style="color:#53a93f;"></i>
                         <span class="menu-text">I9 Categories</span>
                     </a>
                 </li>
                 <li>
-                    <a href="i9section-1-superadmin.html">
+                    <a href="i9section-1.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill I9 Section-1</span><p style="font-size:10px;">(Due: 08/10/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="vsi2-superadmin.html">
+                    <a href="vsi2.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill VSI</span><p style="font-size:10px;">(Due: 01/10/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="state_w4-superadmin.html">
+                    <a href="state_w4.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill W-4</span><p style="font-size:10px;">(Due: 29/10/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="deposit-superadmin.html">
+                    <a href="deposit.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Pay Deposit Details</span><p style="font-size:10px;">(Due: 06/11/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="policies-superadmin.html">
+                    <a href="policies.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Read Policies</span><p style="font-size:10px;">(Due: 13/11/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="review-superadmin.html">
+                    <a href="review.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Review Details</span><p style="font-size:10px;">(Due: 20/11/16)</p>
                     </a>
                 </li>
 				<li>
-                    <a href="select-document-superadmin.html">
+                    <a href="select-document-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Select Documents</span><p style="font-size:10px;">(Due: 23/11/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="upload-document-superadmin.html">
+                    <a href="upload-document.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Upload Documents</span><p style="font-size:10px;">(Due: 25/11/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="signin-superadmin.html">
+                    <a href="signin.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Employee Sign</span><p style="font-size:10px;">(Due: 27/11/16)</p>
                     </a>
                 </li>
 				<li>
-                    <a href="i9section-2-superadmin.html">
+                    <a href="i9section-2.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill I9 Section-2</span><p style="font-size:10px;">(Due: 11/12/16)</p>
                     </a>
                 </li>
 				<li>
-                    <a href="i9section-3-superadmin.html">
+                    <a href="i9section-3.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill I9 Section-3</span><p style="font-size:10px;">(Due: 18/12/16)</p>
                     </a>
                 </li>
 				<li>
-                    <a href="managerlogin-superadmin.html">
+                    <a href="managerlogin.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Manager Approval</span><p style="font-size:10px;">(Due: 04/12/16)</p>
                     </a>
                 </li>
             </ul>
         </li>
-        <li>
+        <!--li>
             <a href="reports.html">
                 <i class="menu-icon fa fa-newspaper-o" style="color:#03B3B2;"></i>
                 <span class="menu-text"> Reports </span>
             </a>
-        </li>
+        </li-->
     </ul>
                 <!-- /Sidebar Menu -->
             </div>
@@ -688,90 +670,447 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
             <div class="page-content">
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
-                    <ul class="breadcrumb">
-                        <li>
-                            <i class="fa fa-home themeprimary"></i>
-                            <a href="index-superadmin.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="managefillinstatus.html">More Pages</a>
-                        </li>
-                        <li class="active">Add Filing Status</li>
-                    </ul>
-                </div>
-                <!-- /Page Breadcrumb -->
-                <!-- Page Header -->
-                <div class="page-header position-relative">
-                    <div class="header-title">
-                        <h1 class="themeprimary">
-                            Add Filing Status
-                        </h1>
+    <ul class="breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="index-manager.html">Dashboard</a>
+        </li>
+        <li class="active">Profile</li>
+    </ul>
+</div>
+<!-- /Page Breadcrumb -->
+<!-- Page Header -->
+<div class="page-header position-relative">
+    <div class="header-title">
+        <h1 id="PageHeadDV">
+           Manager Profile
+        </h1>
+    </div>
+    <!--Header Buttons-->
+    <div class="header-buttons">
+        <a class="sidebar-toggler" href="#">
+            <i class="fa fa-arrows-h"></i>
+        </a>
+        <a class="refresh" id="refresh-toggler" href="">
+            <i class="glyphicon glyphicon-refresh"></i>
+        </a>
+        <a class="fullscreen" id="fullscreen-toggler" href="#">
+            <i class="glyphicon glyphicon-fullscreen"></i>
+        </a>
+    </div>
+    <!--Header Buttons End-->
+</div>
+<!-- /Page Header -->
+<!-- Page Body -->
+<div class="page-body">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="profile-container">
+                <div class="profile-header row">
+                    <div class="col-lg-2 col-md-4 col-sm-12 text-center">
+                        <img src="assets/img/avatars/adam-jansen.jpg" alt="" class="header-avatar" />
                     </div>
-                    <!--Header Buttons-->
-                    <div class="header-buttons">
-                        <a class="sidebar-toggler" href="#">
-                            <i class="fa fa-arrows-h"></i>
-                        </a>
-                        <a class="refresh" id="refresh-toggler" href="">
-                            <i class="glyphicon glyphicon-refresh"></i>
-                        </a>
-                        <a class="fullscreen" id="fullscreen-toggler" href="#">
-                            <i class="glyphicon glyphicon-fullscreen"></i>
-                        </a>
+                    <div class="col-lg-5 col-md-8 col-sm-12 profile-info">
+                        <div class="header-fullname" id="dvfullname">Manager</div>
+                      
+                        <div class="header-information" id="dvuserheader">
+                            Manager works under the client admin and assist him in I9 and E-verify process.
+                        </div>
                     </div>
-                    <!--Header Buttons End-->
+                    
                 </div>
-                <!-- /Page Header -->
-                <!-- Page Body -->
-                <div class="page-body">
-					<div class="col-lg-12 col-sm-12 col-xs-12" style="padding:0px;">
-                         <!-- <h5 class="row-title before-maincolor widget-caption">Add New Division</h5> -->
-							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 division-form">
-							<div class="col-lg-2 col-sm-12 col-xs-12"></div>
-							<form class="form-horizontal col-lg-12 col-sm-12 col-xs-12" role="form" style="margin-top:15px;">
-								<div class="form-group">
-									<label for="inputEmail3" class="col-sm-6 col-md-2 col-lg-2 col-xs-12 col-md-offset-3 col-lg-offset-3 control-label no-padding-right">Title  :</label>
-                                    <div class="col-sm-4">
-										<input type="text" class="form-control" id="inputEmail3">
+                <div class="profile-body">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs tabs-flat  nav-justified" id="myTab11">
+                            <li class="active">
+                                <a data-toggle="tab" href="#profileinfo">
+                                    Profile
+                                </a>
+                            </li>
+                            <li class="tab-yellow">
+                                <a data-toggle="tab" href="#editprofile" > 
+                                    Edit Profile
+                                </a>
+                            </li>
+                            <li class="tab-red" id="changepwdtab">
+                                <a data-toggle="tab" href="#changepwd">
+                                    Change Password
+                                </a>
+                            </li>
+                            <!--li class="tab-palegreen">
+                                <a data-toggle="tab" id="contacttab" href="#contacts">
+                                    Contacts
+                                </a>
+                            </li-->
+
+                        </ul>
+                        <div class="tab-content tabs-flat">
+                            <div id="profileinfo" class="tab-pane active">
+                                <form role="form" id="gridtab">
+                                    <div class="col-sm-12">
+                                        <div class="form-title">
+                                            <h5><strong>Profile Information</strong></h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-6  control-label no-padding-right employee-inputcol">Email Address :</label>
+                                                    <div class="col-sm-4 col-sm-offset-1">
+                                                        <p id="dvusername">manager@betabulls.com</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">Password :</label>
+                                                    <div class="col-sm-4 col-sm-offset-1">
+                                                        <p>********</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">Role :</label>
+                                                    <div class="col-sm-4 col-sm-offset-1">
+                                                        <p id="dvrolename">Manager</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-								<div class="form-group margin-bottom">
-									<label for="inputEmail3" class="col-sm-6 col-md-2 col-lg-2 col-xs-12 col-md-offset-3 col-lg-offset-3 control-label no-padding-right">Description  :</label>
-                                    <div class="col-sm-4">
-										<textarea class="form-control" rows="3" placeholder=""></textarea>
+                                    <div class="col-sm-6">
+                                        <div class="form-title">
+                                            <h5><strong>Personal Information</strong></h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">First Name :</label>
+                                                    <div class="col-sm-4 col-sm-offset-1">
+                                                        <p id="dvfirstname">Manager</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">Last Name :</label>
+                                                    <div class="col-sm-4 col-sm-offset-1">
+                                                        <p id="dvlastname"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">Gender :</label>
+                                                    <div class="col-sm-4 col-sm-offset-1">
+                                                        <p id="dvgender">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" hidden="">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">Date of Birth :</label>
+                                                    <div class="col-sm-4 col-sm-offset-1">
+                                                        <p id="dvdob">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">Phone :</label>
+                                                    <div class="col-sm-4 col-sm-offset-1">
+                                                        <p id="dvphone">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">Mobile :</label>
+                                                    <div class="col-sm-4 col-sm-offset-1">
+                                                        <p id="dvmobile">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-							</form>
-							<hr class="location-hr">
-							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-center center-block">
-								<button onclick="location.href='filingstatus.html'" class="btn btn-primary btn-md btnSearch">Save</button>
-								<button onclick="location.href='filingstatus.html'" class="btn btn-warning btn-md btnSearch">Cancel</button>
-							</div>
-					</div>
-				</div>
+                                        <div class="col-sm-6">
+                                            <div class="form-title">
+                                                <h5><strong>Contact Information</strong></h5>
+                                            </div>
+                                            <div class="row profile-data">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">Address 1 :</label>
+                                                        <div class="col-sm-4 col-sm-offset-1">
+                                                            <p id="dvadd1">-</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row profile-data">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">City:</label>
+                                                        <div class="col-sm-4 col-sm-offset-1">
+                                                            <p id="dvcity">-</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row profile-data">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">State:</label>
+                                                        <div class="col-sm-4 col-sm-offset-1">
+                                                            <p id="dvstate">-</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row profile-data">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="inputEmail3" class="col-sm-6 control-label no-padding-right employee-inputcol">Zipcode:</label>
+                                                        <div class="col-sm-4 col-sm-offset-1">
+                                                            <p id="dvzip">-</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+</form>
+                            </div>
+
+                            <div id="editprofile" class="tab-pane active">
+                                <form role="form" id="Edittab">                                  
+                                    <div class="form-title">
+                                        <h5><strong>Personal Information</strong></h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <input type="text" class="form-control name" placeholder="Manager" data-toggle="tooltip" data-placement="right" data-original-title="FirstName">
+                                                  
+                                                    <i class="fa fa-user green"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <input type="text" class="form-control name" placeholder="" data-toggle="tooltip" data-placement="left" data-original-title="LastName">
+                                                    <i class="fa fa-user orange"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <select class="form-control" style="padding:6px 2px;" id="editgender" data-toggle="tooltip" data-placement="right" data-original-title="Gender">
+                                                    <option value="">Select Gender</option>
+                                                    <option value="1">Male</option>
+                                                    <option value="0">Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <input type="email" class="form-control" placeholder="basha@betabulls.com" data-toggle="tooltip" data-placement="left" data-original-title="EmailAddress" disabled="" style="cursor: default;">
+                                                    <i class="fa fa-user blue"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <input type="number" class="form-control" min="1" max="10" placeholder="Phone" id="editphone" data-toggle="tooltip" data-placement="right" data-original-title="Phone">
+                                                    <i class="glyphicon glyphicon-earphone yellow"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <input type="number" class="form-control" max="10" min="10" placeholder="Mobile" id="editmobile" data-toggle="tooltip" data-placement="left" data-original-title="Mobile">
+                                                    <i class="glyphicon glyphicon-phone palegreen"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" hidden="">
+                                            <input type="text" class="form-control" hidden="" id="editUsername">
+                                            <input type="text" class="form-control" hidden="" id="editPassword">
+                                            <input type="text" class="form-control" hidden="" id="editOtherName">
+                                            <input type="text" class="form-control" hidden="" id="editWorkPhone">
+                                            <input type="text" class="form-control" hidden="" id="editRoleID">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-title">
+                                        <h5><strong>Contact Information</strong></h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <input type="text" class="form-control" placeholder="Address 1" id="editadd1" data-toggle="tooltip" data-placement="right" data-original-title="Address1">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <input type="text" class="form-control" placeholder="Address 2 (Optional)" id="editadd2" data-toggle="tooltip" data-placement="left" data-original-title="Address2">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="City" id="editCity" data-toggle="tooltip" data-placement="right" data-original-title="City">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <select class="form-control" style="padding:6px 2px;" id="editstate" data-toggle="tooltip" data-placement="left" data-original-title="State">
+                                                    <option value="0">Select State</option>
+                                                    <option value="1">Alabama</option>
+                                                    <option value="2">Alaska</option>
+                                                    <option value="3">California</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span class="input-icon icon-right">
+                                                    <input type="text" data-mask="99999" class="form-control" placeholder="Zipcode" id="editzip" data-toggle="tooltip" data-placement="right" data-original-title="Zipcode">                                                  
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-md btn-primary center-block margin-btn" id="btnupdateprofile">Update Profile</button>
+                                </form>
+                            </div>
+                            <div id="changepwd" class="tab-pane">
+                                <form role="form"  id="changepasswordtab">
+                                    <div class="form-title">
+                                        <h5><strong>Change Password</strong></h5>
+                                    </div>
+                                    <div class="row profile-data">
+                                        <label for="inputEmail3" class="col-sm-2 control-label no-padding-right employee-inputcol">Current Password :</label>
+                                        <div class="form-group">
+                                            <div class="col-sm-3 col-sm-offset-1">
+                                                <span class="input-icon icon-right">
+                                                    <input type="password" class="form-control required" id="currentpassword" name="currentpassword"  placeholder="Current Password" 
+                                                           data-bv-notempty="true"
+                                                           data-bv-notempty-message="The current password is required and cannot be empty"
+                                                           data-bv-identical="true"
+                                                           >
+                                                    <i class="fa fa-key blue"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row profile-data">
+                                        <label for="inputEmail3" class="col-sm-2 control-label no-padding-right employee-inputcol">New Password :</label>
+                                        <div class="form-group">
+                                            <div class="col-sm-3 col-sm-offset-1">
+                                                <span class="input-icon icon-right">
+                                                    <input type="password" class="form-control"  name="password" id="password" placeholder="New Password"
+                                                            data-bv-notempty="true"
+                                                           data-bv-notempty-message="The new password is required and cannot be empty"
+                                                           data-bv-identical="true" />
+                                                           
+                                                    <i class="fa fa-key orange"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row profile-data">
+                                        <label for="inputEmail3" class="col-sm-2 control-label no-padding-right employee-inputcol">Confirm Password :</label>
+                                        <div class="form-group">
+                                            <div class="col-sm-3 col-sm-offset-1">
+                                                <span class="input-icon icon-right">                                                  
+                                                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password"
+                                                           data-bv-notempty="true"
+                                                           data-bv-notempty-message="The confirm password is required and cannot be empty"
+                                                           data-bv-identical="true"
+                                                           data-bv-identical-field="password"
+                                                           data-bv-identical-message="Confirm password must match with new password."
+                                                           data-bv-different="true"
+                                                           data-bv-different-field="username"
+                                                           data-bv-different-message="The password cannot be the same as username" />
+                                                    <i class="fa fa-key azure"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                     <button type="button" class="btn btn-md btn-primary center-block margin-btn" id="btnSave">Update Password</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-			<div class="footer">
-
-    <h6 class="pull-left col-md-4 col-md-offset-3 col-lg-3 col-lg-offset-2 col-xs-5 col-sm-3">Version 0.01.00.162</h6>
-    <h6 class="pull-right col-xs-6 col-md-4 col-sm-6 col-lg-3 col-lg-offset-2">Copyright © 2016 Beta Bulls. All Rights Reserved</h6>
-</div>
         </div>
         <!-- /Page Container -->
         <!-- Main Container -->
 
     </div>
+<div class="footer">
 
+    <h6 class="pull-left col-md-4 col-md-offset-3 col-lg-3 col-lg-offset-2 col-xs-5 col-sm-3">Version 0.01.00.162</h6>
+    <h6 class="pull-right col-xs-6 col-md-4 col-sm-6 col-lg-3 col-lg-offset-2">Copyright © 2016 Beta Bulls. All Rights Reserved</h6>
+</div>
     <!--Basic Scripts-->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/slimscroll/jquery.slimscroll.min.js"></script>
 
     <!--Beyond Scripts-->
-    <script src="assets/js/beyond.min.js"></script>
+	<script src="assets/js/beyond.js"></script>
+    
+    
 
+    <!--Page Related Scripts-->
+	<script src="assets/js/datetime/bootstrap-datepicker.js"></script>
+	<!--Bootstrap Date Picker-->
+<script>
+		 //--Bootstrap Date Picker--
+        $('.date-picker').datepicker();
+	</script>
+    
 </body>
 <!--  /Body -->
 </html>

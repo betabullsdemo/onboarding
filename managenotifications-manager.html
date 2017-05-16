@@ -10,7 +10,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
 <!-- Head -->
 <head>
     <meta charset="utf-8" />
-    <title>Add Filing Status</title>
+    <title>Manage Notifications</title>
 
     <meta name="description" content="blank page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,30 +36,23 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <link href="assets/css/custom.css" rel="stylesheet" />
     <link id="skin-link" href="" rel="stylesheet" type="text/css" />
 	
-	
+	<!--Page Related styles-->
+    <link href="assets/css/dataTables.bootstrap.css" rel="stylesheet" />
 
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
     <script src="assets/js/skins.min.js"></script>
 	
 	<style>
-		::-webkit-input-placeholder {
-   color: #888 !important;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   color: #888 !important;  
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #888 !important;  
-}
-
-:-ms-input-placeholder {  
-   color: #888;  
-}
+		.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {vertical-align:middle;}
+		
+		.table>tbody>tr>td a{margin:3px;}
+		
+		.table>thead>tr>th {background-color:#c1c1c1;}
 
 .form-horizontal .form-group {margin-bottom:8px;}
-.form-horizontal .control-label {text-align:left;}
+
+.checkbox {text-align:center;}
+
 	</style>
 </head>
 <!-- /Head -->
@@ -321,13 +314,13 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                                         <img src="assets/img/avatars/adam-jansen.jpg">
                                     </div>
                                     <section>
-                                    <h2><span class="profile"><span id="ProfileName"></span>Super Admin</span></h2>
-                                </section>
-                            </a>
-                            <!--Login Area Dropdown-->
-                            <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
-                                <li class="username"><a></a></li>
-                                <li class="email"><a id="UserEmail" style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">onboardsuperuser@gmail.com</a></li>
+                                        <h2><span class="profile"><span id="ProfileName">Manager</span></span></h2>
+                                    </section>
+                                </a>
+                                <!--Login Area Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                                    <li class="username"><a>Manager</a></li>
+                                    <li class="email"><a>manager@betabulls.com</a></li>
                                     <!--Avatar Area-->
                                     <li>
                                         <div class="avatar-area">
@@ -337,7 +330,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                                     </li>
                                     <!--Avatar Area-->
                                     <li class="edit">
-                                        <a href="profile.html" class="pull-left">Profile</a>
+                                        <a href="profile-manager.html" class="pull-left">Profile</a>
                                         <!-- <a href="#" class="pull-right">Setting</a> -->
                                     </li>
                                     <!--Theme Selector Area-->
@@ -408,27 +401,18 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
         <div class="page-container">
             <!-- Page Sidebar -->
             <div class="page-sidebar" id="sidebar">
-                <!-- Page Sidebar Header-->
-				<div class="sidebar-header-wrapper">
-        <div class="form-group" id="OnlyIndex">
-            <div class="">
-                <select class="form-control" style="border-radius:0px;">
-                    <option value="0">Select Client...</option>
-                    <option value="1">Client 01</option>
-                    <option value="2">Client 02</option>
-                    <option value="3">Client 03</option>
-                    <option value="4">Client 04</option>
-                    <option value="5">Client 05</option>
-                </select>
-            </div>
-        </div>
-    </div>
-                <!-- /Page Sidebar Header -->
+			<div class="sidebar-header-wrapper">
+				<div style="" id="ExceptIndex">
+					<input type="text" class="searchinput">
+					<i class="searchicon fa fa-search"></i>
+				</div>
+			</div>
+              
                 <!-- Sidebar Menu -->
-<ul class="nav sidebar-menu" id="All">
+                <ul class="nav sidebar-menu" id="All">
        
         <li>
-            <a href="index-superadmin.html">
+            <a href="index-manager.html">
                 <i class="menu-icon glyphicon glyphicon-home" style="color:#2dc3e8"></i>
                 <span class="menu-text"> Dashboard </span>
             </a>
@@ -442,162 +426,53 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="managemanagers.html">
+                    <a href="managemanagersmanager.html">
                         <span class="menu-text">Manage Users</span>
                     </a>
                 </li>
             </ul>
         </li>
-        
-         <li>
+        <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-file-text" style="color:#0072C6;"></i>
                 <span class="menu-text"> Document Management </span>
                 <i class="menu-expand"></i>
             </a>
             <ul class="submenu">
-                <li>
-                    <a href="folders-documents.html" class="menu-dropdown">
+                <!-- <li>
+                    <a href="folders-documents-client.html" class="menu-dropdown">
                         <span class="menu-text">
                             My Documents
                         </span>
                     </a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="sharedwithme.html" class="menu-dropdown">
+                    <a href="sharedwithmemanager.html" class="menu-dropdown">
                         <span class="menu-text">Shared With Me</span>
                     </a>
                 </li>
                 
             </ul>
         </li>
-        
         <li class="open">
-            <a href="#" class="menu-dropdown">
-                <i class="menu-icon fa fa-cogs" style="color:#FF8F32;"></i>
-                <span class="menu-text"> System Administration </span>
-                <i class="menu-expand"></i>
-            </a>
-
-            <ul class="submenu">
-                <li>
-                    <a href="manageclients.html">
-                        <span class="menu-text">Manage Clients</span>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="managestate.html">
-                        <span class="menu-text">Manage States</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="manageraces.html">
-                        <span class="menu-text">Manage Races</span>
-                    </a>
-                </li>
-                <li class="active">
-                    <a href="filingstatus.html">
-                        <span class="menu-text">Filing Status</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="managecitizenships.html">
-                        <span class="menu-text">Manage Citizenships</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="managei9documents.html">
-                        <span class="menu-text">Manage I9 Documents</span>
-                    </a>
-                </li>
-                <!-- <li>
-                    <a href="#">
-                        <span class="menu-text">Manage I9 Validations</span>
-                    </a>
-                </li> -->
-                <li>
-                    <a href="managestages.html">
-                        <span class="menu-text">Manage Stages</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="onboardingprocess.html">
-                        <span class="menu-text">Onboarding Process</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-        <li>
-            <a href="#" class="menu-dropdown">
-                <i class="menu-icon fa fa-cogs" style="color:#FF8F32;"></i>
-                <span class="menu-text"> Administration </span>
-                <i class="menu-expand"></i>
-            </a>
-
-            <ul class="submenu">
-                <li>
-                    <a href="managedivisions.html">
-                        <span class="menu-text">Manage Divisions</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="managedistricts.html" class="menu-dropdown">
-                        <span class="menu-text">
-                            Manage Districts
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="managelocations.html">
-                        <span class="menu-text">Manage Locations</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="managepolicies.html">
-                        <span class="menu-text">Manage Policies/Forms</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="managejobtitles.html">
-                        <span class="menu-text">Manage Jobtitles</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-exclamation-triangle" style="color:#AC193D;"></i>
                 <span class="menu-text"> Notifications </span>
                 <i class="menu-expand"></i>
             </a>
             <ul class="submenu">
-                <li>
-                    <a href="managenotifications.html">
+                <li  class="active">
+                    <a href="managenotifications-manager.html">
                         <span class="menu-text">Manage Notifications</span>
                     </a>
                 </li>
 				<li>
-                    <a href="notification-settings.html">
+                    <a href="notification-settings-manager.html">
                         <span class="menu-text">Notification Settings</span>
                     </a>
                 </li>
             </ul>
         </li>
-<li>
-            <a href="preonboarding.html" class="menu-dropdown">
-                <i class="menu-icon fa fa-users" style="color:#53a93f;"></i>
-                <span class="menu-text">Pre-Onboarding</span>
-            </a>
-        </li>
-        <!--li>
-            <a href="onboardinglist.html">
-                <i class="menu-icon fa fa-list" style="color:#03B3B2;"></i>
-                <span class="menu-text"> Onboarding List </span>
-
-            </a>
-        </li-->
         <li class="">
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-cogs" style="color:#FF8F32;"></i>
@@ -606,75 +481,75 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="i9categories-superadmin.html" class="menu-dropdown">
+                    <a href="i9categories-manager.html" class="menu-dropdown">
                         <i class="fa fa-list" style="color:#53a93f;"></i>
                         <span class="menu-text">I9 Categories</span>
                     </a>
                 </li>
                 <li>
-                    <a href="i9section-1-superadmin.html">
+                    <a href="i9section-1-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill I9 Section-1</span><p style="font-size:10px;">(Due: 08/10/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="vsi2-superadmin.html">
+                    <a href="vsi2-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill VSI</span><p style="font-size:10px;">(Due: 01/10/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="state_w4-superadmin.html">
+                    <a href="state_w4-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill W-4</span><p style="font-size:10px;">(Due: 29/10/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="deposit-superadmin.html">
+                    <a href="deposit-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Pay Deposit Details</span><p style="font-size:10px;">(Due: 06/11/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="policies-superadmin.html">
+                    <a href="policies-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Read Policies</span><p style="font-size:10px;">(Due: 13/11/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="review-superadmin.html">
+                    <a href="review-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Review Details</span><p style="font-size:10px;">(Due: 20/11/16)</p>
                     </a>
                 </li>
 				<li>
-                    <a href="select-document-superadmin.html">
+                    <a href="select-document-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Select Documents</span><p style="font-size:10px;">(Due: 23/11/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="upload-document-superadmin.html">
+                    <a href="upload-document-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Upload Documents</span><p style="font-size:10px;">(Due: 25/11/16)</p>
                     </a>
                 </li>
                 <li>
-                    <a href="signin-superadmin.html">
+                    <a href="signin-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Employee Sign</span><p style="font-size:10px;">(Due: 27/11/16)</p>
                     </a>
                 </li>
 				<li>
-                    <a href="i9section-2-superadmin.html">
+                    <a href="i9section-2-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill I9 Section-2</span><p style="font-size:10px;">(Due: 11/12/16)</p>
                     </a>
                 </li>
 				<li>
-                    <a href="i9section-3-superadmin.html">
+                    <a href="i9section-3-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill I9 Section-3</span><p style="font-size:10px;">(Due: 18/12/16)</p>
                     </a>
                 </li>
 				<li>
-                    <a href="managerlogin-superadmin.html">
+                    <a href="managerlogin-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Manager Approval</span><p style="font-size:10px;">(Due: 04/12/16)</p>
                     </a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="reports.html">
+            <a href="reports-manager.html">
                 <i class="menu-icon fa fa-newspaper-o" style="color:#03B3B2;"></i>
                 <span class="menu-text"> Reports </span>
             </a>
@@ -683,7 +558,242 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <!-- /Sidebar Menu -->
             </div>
             <!-- /Page Sidebar -->
-            
+            <!-- Chat Bar -->
+            <div id="chatbar" class="page-chatbar">
+                <div class="chatbar-contacts">
+                    <div class="contacts-search">
+                        <input type="text" class="searchinput" placeholder="Search Contacts" />
+                        <i class="searchicon fa fa-search"></i>
+                        <div class="searchhelper">Search Your Contacts and Chat History</div>
+                    </div>
+                    <ul class="contacts-list">
+                        <li class="contact">
+                            <div class="contact-avatar">
+                                <img src="assets/img/avatars/divyia.jpg" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Divyia Philips</div>
+                                <div class="contact-status">
+                                    <div class="online"></div>
+                                    <div class="status">online</div>
+                                </div>
+                                <div class="last-chat-time">
+                                    last week
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact">
+                            <div class="contact-avatar">
+                                <img src="assets/img/avatars/Nicolai-Larson.jpg" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Adam Johnson</div>
+                                <div class="contact-status">
+                                    <div class="offline"></div>
+                                    <div class="status">left 4 mins ago</div>
+                                </div>
+                                <div class="last-chat-time">
+                                    today
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact">
+                            <div class="contact-avatar">
+                                <img src="assets/img/avatars/John-Smith.jpg" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">John Smith</div>
+                                <div class="contact-status">
+                                    <div class="online"></div>
+                                    <div class="status">online</div>
+                                </div>
+                                <div class="last-chat-time">
+                                    1:57 am
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact">
+                            <div class="contact-avatar">
+                                <img src="assets/img/avatars/Osvaldus-Valutis.jpg" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Osvaldus Valutis</div>
+                                <div class="contact-status">
+                                    <div class="online"></div>
+                                    <div class="status">online</div>
+                                </div>
+                                <div class="last-chat-time">
+                                    today
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact">
+                            <div class="contact-avatar">
+                                <img src="assets/img/avatars/Javi-Jimenez.jpg" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Javi Jimenez</div>
+                                <div class="contact-status">
+                                    <div class="online"></div>
+                                    <div class="status">online</div>
+                                </div>
+                                <div class="last-chat-time">
+                                    today
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact">
+                            <div class="contact-avatar">
+                                <img src="assets/img/avatars/Stephanie-Walter.jpg" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Stephanie Walter</div>
+                                <div class="contact-status">
+                                    <div class="online"></div>
+                                    <div class="status">online</div>
+                                </div>
+                                <div class="last-chat-time">
+                                    yesterday
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact">
+                            <div class="contact-avatar">
+                                <img src="assets/img/avatars/Sergey-Azovskiy.jpg" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Sergey Azovskiy</div>
+                                <div class="contact-status">
+                                    <div class="offline"></div>
+                                    <div class="status">offline since oct 24</div>
+                                </div>
+                                <div class="last-chat-time">
+                                    22 oct
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact">
+                            <div class="contact-avatar">
+                                <img src="assets/img/avatars/Lee-Munroe.jpg" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Lee Munroe</div>
+                                <div class="contact-status">
+                                    <div class="online"></div>
+                                    <div class="status">online</div>
+                                </div>
+                                <div class="last-chat-time">
+                                    today
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact">
+                            <div class="contact-avatar">
+                                <img src="assets/img/avatars/divyia.jpg" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Divyia Philips</div>
+                                <div class="contact-status">
+                                    <div class="online"></div>
+                                    <div class="status">online</div>
+                                </div>
+                                <div class="last-chat-time">
+                                    last week
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chatbar-messages" style="display: none;">
+                    <div class="messages-contact">
+                        <div class="contact-avatar">
+                            <img src="assets/img/avatars/divyia.jpg" />
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">Divyia Philips</div>
+                            <div class="contact-status">
+                                <div class="online"></div>
+                                <div class="status">online</div>
+                            </div>
+                            <div class="last-chat-time">
+                                a moment ago
+                            </div>
+                            <div class="back">
+                                <i class="fa fa-arrow-circle-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="messages-list">
+                        <li class="message">
+                            <div class="message-info">
+                                <div class="bullet"></div>
+                                <div class="contact-name">Me</div>
+                                <div class="message-time">10:14 AM, Today</div>
+                            </div>
+                            <div class="message-body">
+                                Hi, Hope all is good. Are we meeting today?
+                            </div>
+                        </li>
+                        <li class="message reply">
+                            <div class="message-info">
+                                <div class="bullet"></div>
+                                <div class="contact-name">Divyia</div>
+                                <div class="message-time">10:15 AM, Today</div>
+                            </div>
+                            <div class="message-body">
+                                Hi, Hope all is good. Are we meeting today?
+                            </div>
+                        </li>
+                        <li class="message">
+                            <div class="message-info">
+                                <div class="bullet"></div>
+                                <div class="contact-name">Me</div>
+                                <div class="message-time">10:14 AM, Today</div>
+                            </div>
+                            <div class="message-body">
+                                Hi, Hope all is good. Are we meeting today?
+                            </div>
+                        </li>
+                        <li class="message reply">
+                            <div class="message-info">
+                                <div class="bullet"></div>
+                                <div class="contact-name">Divyia</div>
+                                <div class="message-time">10:15 AM, Today</div>
+                            </div>
+                            <div class="message-body">
+                                Hi, Hope all is good. Are we meeting today?
+                            </div>
+                        </li>
+                        <li class="message">
+                            <div class="message-info">
+                                <div class="bullet"></div>
+                                <div class="contact-name">Me</div>
+                                <div class="message-time">10:14 AM, Today</div>
+                            </div>
+                            <div class="message-body">
+                                Hi, Hope all is good. Are we meeting today?
+                            </div>
+                        </li>
+                        <li class="message reply">
+                            <div class="message-info">
+                                <div class="bullet"></div>
+                                <div class="contact-name">Divyia</div>
+                                <div class="message-time">10:15 AM, Today</div>
+                            </div>
+                            <div class="message-body">
+                                Hi, Hope all is good. Are we meeting today?
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="send-message">
+                        <span class="input-icon icon-right">
+                            <textarea rows="4" class="form-control" placeholder="Type your message"></textarea>
+                            <i class="fa fa-camera themeprimary"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- /Chat Bar -->
             <!-- Page Content -->
             <div class="page-content">
                 <!-- Page Breadcrumb -->
@@ -691,12 +801,10 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                     <ul class="breadcrumb">
                         <li>
                             <i class="fa fa-home themeprimary"></i>
-                            <a href="index-superadmin.html">Home</a>
+                            <a href="index-manager.html">Dashboard</a>
                         </li>
-                        <li>
-                            <a href="managefillinstatus.html">More Pages</a>
-                        </li>
-                        <li class="active">Add Filing Status</li>
+                        
+                        <li class="active">Manage Notifications</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -704,7 +812,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <div class="page-header position-relative">
                     <div class="header-title">
                         <h1 class="themeprimary">
-                            Add Filing Status
+                            Manage Notifications
                         </h1>
                     </div>
                     <!--Header Buttons-->
@@ -724,40 +832,191 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <!-- /Page Header -->
                 <!-- Page Body -->
                 <div class="page-body">
-					<div class="col-lg-12 col-sm-12 col-xs-12" style="padding:0px;">
-                         <!-- <h5 class="row-title before-maincolor widget-caption">Add New Division</h5> -->
-							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 division-form">
-							<div class="col-lg-2 col-sm-12 col-xs-12"></div>
-							<form class="form-horizontal col-lg-12 col-sm-12 col-xs-12" role="form" style="margin-top:15px;">
-								<div class="form-group">
-									<label for="inputEmail3" class="col-sm-6 col-md-2 col-lg-2 col-xs-12 col-md-offset-3 col-lg-offset-3 control-label no-padding-right">Title  :</label>
-                                    <div class="col-sm-4">
-										<input type="text" class="form-control" id="inputEmail3">
-                                    </div>
+    <div class="col-lg-12 col-sm-12 col-xs-12 manage-division" style="padding:0px;">
+        <div class="well">
+            <a href="addnotification-manager.html" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hr-btm15 no-padding-left no-padding-right"><button type="button" class="btn btn-md btn-primary pull-right">Add Notification</button></a>
+            <div class="table-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12  no-padding-left no-padding-right">
+                <!-- <div class="header bg-default">
+                    Notifications
+                </div> -->
+                <table class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="simpledatatable_info">
+                    <thead>
+                        <tr role="row">
+                            <th>
+                                ID
+                            </th>
+                            <th>
+                                Process Step
+                            </th>
+                            <th>
+                                Email Super Admin
+                            </th>
+                            <th>
+                                Email Client Admin
+                            </th>
+                            <th>
+                                Email Manager
+                            </th>
+                            <th>
+                                Email Employee
+                            </th>
+
+                            <th style="width:144px;">
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                34
+                            </td>
+                            <td>
+                                New Hire Paperwork Complete Pending Verify
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
                                 </div>
-								<div class="form-group margin-bottom">
-									<label for="inputEmail3" class="col-sm-6 col-md-2 col-lg-2 col-xs-12 col-md-offset-3 col-lg-offset-3 control-label no-padding-right">Description  :</label>
-                                    <div class="col-sm-4">
-										<textarea class="form-control" rows="3" placeholder=""></textarea>
-                                    </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
                                 </div>
-							</form>
-							<hr class="location-hr">
-							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-center center-block">
-								<button onclick="location.href='filingstatus.html'" class="btn btn-primary btn-md btnSearch">Save</button>
-								<button onclick="location.href='filingstatus.html'" class="btn btn-warning btn-md btnSearch">Cancel</button>
-							</div>
-					</div>
-				</div>
-                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </td>
+
+                            <td valign="middle" style="width:144px;">
+                                <a href="editnotification-client.html" class="" data-toggle="tooltip" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil-square-o editpopover"></i></a>
+                                <a href="#" class="" data-toggle="modal" data-target="#formConfirm" data-title="Delete" data-message="Are you sure you want to delete this record ?"><i class="fa fa-trash-o deletepopover"></i> </a>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                15
+                            </td>
+                            <td>
+                                E-Verify Delay
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </td>
+
+                            <td valign="middle" style="width:144px;">
+                                <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil-square-o editpopover"></i></a>
+                                <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Delete"><i class="fa fa-trash-o deletepopover"></i> </a>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                18
+                            </td>
+                            <td>
+                                E-Verify Fail
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="inverted">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                            </td>
+
+                            <td valign="middle" style="width:144px;">
+                                <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil-square-o editpopover"></i></a>
+                                <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Delete"><i class="fa fa-trash-o deletepopover"></i> </a>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</div>
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-			<div class="footer">
-
-    <h6 class="pull-left col-md-4 col-md-offset-3 col-lg-3 col-lg-offset-2 col-xs-5 col-sm-3">Version 0.01.00.162</h6>
-    <h6 class="pull-right col-xs-6 col-md-4 col-sm-6 col-lg-3 col-lg-offset-2">Copyright © 2016 Beta Bulls. All Rights Reserved</h6>
-</div>
         </div>
         <!-- /Page Container -->
         <!-- Main Container -->
@@ -772,6 +1031,18 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <!--Beyond Scripts-->
     <script src="assets/js/beyond.min.js"></script>
 
+    <!--Page Related Scripts-->
+    <script src="assets/js/datatable/jquery.dataTables.min.js"></script>
+    <script src="assets/js/datatable/ZeroClipboard.js"></script>
+    <script src="assets/js/datatable/dataTables.tableTools.min.js"></script>
+    <script src="assets/js/datatable/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/datatable/datatables-init.js"></script>
+    <script>
+        InitiateSimpleDataTable.init();
+        InitiateEditableDataTable.init();
+        InitiateExpandableDataTable.init();
+        InitiateSearchableDataTable.init();
+    </script>
 </body>
 <!--  /Body -->
 </html>
