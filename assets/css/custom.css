@@ -1924,3 +1924,22 @@ margin-top: 40px; z-index:190; }
     margin-bottom: 3px !important;
 	    border-top: 3px solid #e5e5e5;
 }
+@media (max-width: 768px) {
+    .page-content {
+    margin-left: 0px !important;
+}
+.navbar-container {padding-left:10px;}
+}
+@media (max-width: 425px){
+.page-content {
+    margin-left: 0px !important;
+    margin-top: 45px !important;
+}
+.navbar-container {height:135px !important}
+.dataTables_wrapper {margin:12px 0 !important}
+}
+@media only screen and (max-width: 760px) and (min-width: 270px){
+.navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area section h2 span {
+    color: #fff !important;
+}
+}
