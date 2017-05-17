@@ -1619,7 +1619,7 @@ margin-top: 40px; z-index:190; }
 .navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area {height:auto !important;}
 .navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area section h2 span {color:#000;}
 .page-breadcrumbs {min-height:62px;}
- #ProfileName{display:none !important}
+ /*#ProfileName{display:none !important}*/
 }
 
  .navbar .navbar-inner .navbar-header .navbar-account .account-area .login-area {min-width:100px !important; width:auto !important;}

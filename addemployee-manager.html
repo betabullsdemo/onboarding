@@ -10,7 +10,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
 <!-- Head -->
 <head>
     <meta charset="utf-8" />
-    <title>Attestation</title>
+    <title>Add Employee</title>
 
     <meta name="description" content="blank page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,26 +35,43 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <link href="assets/css/animate.min.css" rel="stylesheet" />
     <link href="assets/css/custom.css" rel="stylesheet" />
     <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+	
+	
 
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
     <script src="assets/js/skins.min.js"></script>
 	
 	<style>
-	.wizard.wizard-wired ul li {width:7.6%;}
-	.form-group p {margin-top:5px;}
-	.form-horizontal .control-label {text-align:left;}
-	.help-block {font-size:9px; line-height:16px;}
-	
-	input[type=checkbox]~.text, input[type=radio]~.text {margin-right:30px;}
-	.form-horizontal .form-group {margin-left:0px; margin-right:0px;}
-.instruction-pop input{width:85%; float:left; margin-right:10px;}
- .instruction-pop a{float:left; padding:1px 7px; background-color:#2dc3e8; border-radius:20px; margin-top:5px; color:#fff;}
- .popover {max-width:237px; left:742px;}
- 
- .popover-content {font-size:13px;}
- .instr-align {float:left}
- .align-left{padding-left:0px}
- .align-btn {padding-left:0px;margin-top:5px;margin-bottom:15px}
+		::-webkit-input-placeholder {
+   color: #888 !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #888 !important;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #888 !important;  
+}
+
+:-ms-input-placeholder {  
+   color: #888;  
+}
+
+.form-horizontal .form-group {margin-bottom:8px;}
+.form-horizontal .control-label {text-align:left;}
+
+
+.main-container {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+.footer {
+height: 4em;
+}
+
 	</style>
 </head>
 <!-- /Head -->
@@ -416,7 +433,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 </li>
             </ul>
         </li>
-        <li>
+        <li class="active">
             <a href="preonboarding-manager.html" class="menu-dropdown">
                 <i class="menu-icon fa fa-users" style="color:#53a93f;"></i>
                 <span class="menu-text">Pre-Onboarding</span>
@@ -429,7 +446,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
 
             </a>
         </li-->
-        <li class="open">
+        <li class="">
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-cogs" style="color:#FF8F32;"></i>
                 <span class="menu-text"> Onboarding </span>
@@ -442,7 +459,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                         <span class="menu-text">I9 Categories</span>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="i9section-1-manager.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill I9 Section-1</span><p style="font-size:10px;">(Due: 08/10/16)</p>
                     </a>
@@ -514,18 +531,20 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <!-- /Sidebar Menu -->
             </div>
             <!-- /Page Sidebar -->
-     
+            
             <!-- Page Content -->
             <div class="page-content">
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
                         <li>
-                            <i class="fa fa-home"></i>
-                            <a href="index-manager.html">Dashboard</a>
+                            <i class="fa fa-home themeprimary"></i>
+                            <a href="index-superadmin.html">Dashboard</a>
                         </li>
-                 
-                        <li class="active">I9 Section-1 Attestation</li>
+                        <li>
+                            <a href="preonboarding.html">Pre Onboarding</a>
+                        </li>
+                        <li class="active">Add Employee</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -533,7 +552,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <div class="page-header position-relative">
                     <div class="header-title">
                         <h1 class="themeprimary">
-                            I9 Section-1 : Attestation
+                            Add Employee
                         </h1>
                     </div>
                     <!--Header Buttons-->
@@ -556,139 +575,208 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
 					<div class="col-lg-12 col-sm-12 col-xs-12" style="padding:0px;">
                          <!-- <h5 class="row-title before-maincolor widget-caption">Add New Division</h5> -->
 							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 division-form">
-							<form class="form-horizontal form-padding" role="form">
-							<p class="main-color"><strong>I am aware that federal law provides for imprisonment and/or fines for false statements or use of false documents in connection with the completion of this form.</strong></p>
-							<p class="main-color"><strong>I attest, under penalty of perjury, that i am (check one of the following boxes):</strong></p>
-							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<div class="radio">
-									<label>
-										<input name="form-field-radio" type="radio" class="main-color">
-											<span class="text main-color">A citizen of the United State</span>
-									</label>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<div class="instruction-pop" style="margin-bottom:10px; overflow:hidden;">
-								<div class="radio instr-align">
-									<label>
-										<input name="form-field-radio" type="radio" class="main-color">
-											<span class="text main-color">A noncitizen national of United States</span>
-									</label>
-								</div>
-								<a href="javascript:void(0);" data-container="body" data-class="" data-toggle="popover-hover" data-placement="right" data-title="Instructions" data-content="Non citizen nationals of the United States are persons born in American Samoa, certan former citizens of the former Trust Territory of Pacific Islands, and certain children of non citizen nationals born abroad." data-original-title="" title="">
-                                                    ?
-                                                </a>
-							</div>
-							</div>
-									<div class="form-group col-sm-12">
-									<div class="radio col-sm-7" style="padding-left:0px">
-									<label>
-										<input name="form-field-radio" type="radio" class="main-color">
-											<span class="text main-color">A lawful permanent resident &nbsp;&nbsp;&nbsp;(Alien registration number or USCIS number)</span>
-									</label>
-								</div>
-                                    <div class="col-sm-4 form-group" style="padding-left:0px; margin-top:8px;">
-										<div class="col-sm-6 no-padding-left no-padding-right">
-										<select class="form-select form-control">
-																<option value="0">A</option>
-																<option value="1">USCIS</option>
-																
+							<form class="form-horizontal hidden-xs" role="form" style="margin-top:15px;">
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 control-label employee-inputcol">Last Name (Family Name) :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Division :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1">Division 1</option>
+																<option value="2">Division 2</option>
+																<option value="3">Division 3</option>
 															</select>
-															</div>
-															<div class="col-sm-6  attes-top no-padding-right">
-										<input type="email" class="form-control" id="inputEmail3">
-										</div>
-                                    </div>
-                                </div>
-								<div class="form-group col-sm-12">
-									
-									<div class="radio col-sm-7" style="padding-left:0px">
-									<label>
-										<input name="form-field-radio" type="radio" class="main-color">
-											<span class="text main-color">An alien authorized to work until &nbsp;&nbsp;&nbsp;(Expiration date if applicable)<p style="padding-left:20px;">Some aliens may write "N/A" in the expiration field.</p></span>
-									</label>
-								</div>
-                                    <div class="col-sm-4 form-group" style="padding-left:0px; margin-top:10px;">
-										<input type="email" class="form-control" id="inputEmail3">
-                                    </div>
-                                </div>
-							<hr class="location-hr">
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<p class="main-color"><strong>Aliens authorized to work must provide only one of the document numbers to complete form 1-9:</strong></p>
-								<p class="main-color"><strong> An Alien Registration Number/USCIS Number OR Form 1-94 Admission Number OR Foriegn Passport Number.</strong></p>
-								
-								<div class="form-group col-sm-10 hide-show text-center"  style="padding-left:5px">
-									<label for="inputEmail3" class="col-sm-4 control-label no-padding-right">1. Alien Registration Number <p style="margin-left:12px">(A-Number/USCIS Number)</p></label>
-                                    <div class="col-sm-4">
-										<input type="email" class="form-control" id="inputEmail3">
-                                    </div>
-                                </div>
-								
-							</div>
-							
-							<div class="form-group col-sm-8">
-										<h4 class="text-center"><strong>or</strong></h4>
-									</div>
-							
-								
-							<div class="form-group col-sm-10 hide-show text-center">
-									<label for="inputEmail3" class="col-sm-4 control-label no-padding-right">2. Form I-94 adminssion Number</label>
-                                    <div class="col-sm-4">
-										<input type="text" class="form-control" id="inputEmail3">
-                                    </div>
-                                </div>
-								
-
-
-							<div class="form-group col-sm-8">
-										<h4 class="text-center"><strong>or</strong></h4>
-									</div>
-							
-
-								
-								<div class="form-group col-sm-10 hide-show text-center">
-									<label for="inputEmail3" class="col-sm-4 control-label no-padding-right ">3. Foreign Passport Number</label>
-                                    <div class="col-sm-4">
-										<input type="text" class="form-control" id="inputEmail3">
-                                    </div>
-                                </div>
-
-								<div class="form-group col-sm-10 hide-show text-center">
-									<label for="inputEmail3" class="col-sm-4 control-label no-padding-right">Country of Issuance</label>
-                                    <div class="col-sm-4">
-										<select class="form-select form-control">
-																<option value="1">Afghanistan</option>
-																<option value="1">Albania</option>
-																<option value="1">Algeria</option>
-																<option value="1">Belize</option>
-																<option value="1">Cambodia</option>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 control-label employee-inputcol">First Name (Given Name) :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Reporting Manager :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1">Reporting Manager 1</option>
+																<option value="2">Reporting Manager 2</option>
+																<option value="3">Reporting Manager 3</option>
 															</select>
-                                    </div>
-                                </div>
-							 </div>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 control-label employee-inputcol">Middle Name (Initial) :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label class="col-sm-4 col-sm-offset-2 control-label employee-inputcol">Suffix :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1">Jr.</option>
+																<option value="2">Sr.</option>
+																<option value="3">I</option>
+																<option value="4">II</option>
+																<option value="5">III</option>
+																<option value="6">IV</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 control-label employee-inputcol">Location :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1">Alabama</option>
+																<option value="2">Alaska</option>
+																<option value="3">California</option>
+																<option value="4">Colorado</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label for="inputEmail3" class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Job Title :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label for="inputEmail3" class="col-sm-5 col-sm-offset-1 control-label employee-inputcol">Email Address:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="email" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 margin-bottom no-padding-right">
+                                                        <label for="inputEmail3" class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Pay Rate per Hour $ :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3" placeholder="e.g. 8.5">
+                                                        </div>
+                                                    </div>
+													
 							</form>
+							
+							
+							<form class="form-horizontal hidden-md hidden-lg hidden-sm" role="form" style="margin-top:15px;">
+													<div class="form-group">
+                                                        <label class="col-xs-12 control-label employee-inputcol">Last Name (Family Name) :</label>
+                                                        <div class="col-xs-12">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													<div class="form-group">
+                                                        <label class="col-xs-12 control-label employee-inputcol">Division :</label>
+                                                        <div class="col-xs-12">
+                                                            <select class="form-select form-control">
+																<option value="1">Division 1</option>
+																<option value="2">Division 2</option>
+																<option value="3">Division 3</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group">
+                                                        <label class="col-xs-12 control-label employee-inputcol">First Name (Given Name) :</label>
+                                                        <div class="col-xs-12">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group">
+                                                        <label class="col-xs-12 control-label employee-inputcol">Reporting Manager :</label>
+                                                        <div class="col-xs-12">
+                                                            <select class="form-select form-control">
+																<option value="1">Reporting Manager 1</option>
+																<option value="2">Reporting Manager 2</option>
+																<option value="3">Reporting Manager 3</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group">
+                                                        <label class="col-xs-12 control-label employee-inputcol">Middle Name (Initial) :</label>
+                                                        <div class="col-xs-12">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													<div class="form-group">
+                                                        <label class="col-xs-12 control-label employee-inputcol">Suffix :</label>
+                                                        <div class="col-xs-12">
+                                                            <select class="form-select form-control">
+																<option value="1">Jr.</option>
+																<option value="2">Sr.</option>
+																<option value="3">I</option>
+																<option value="4">II</option>
+																<option value="5">III</option>
+																<option value="6">IV</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													<div class="form-group">
+                                                        <label class="col-xs-12 control-label employee-inputcol">Location :</label>
+                                                        <div class="col-xs-12">
+                                                            <select class="form-select form-control">
+																<option value="1">Alabama</option>
+																<option value="2">Alaska</option>
+																<option value="3">California</option>
+																<option value="4">Colorado</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group">
+                                                        <label for="inputEmail3" class="col-xs-12 control-label employee-inputcol">Job Title :</label>
+                                                        <div class="col-xs-12">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group">
+                                                        <label for="inputEmail3" class="col-xs-12 control-label employee-inputcol">Email Address:</label>
+                                                        <div class="col-xs-12">
+                                                            <input type="email" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group">
+                                                        <label for="inputEmail3" class="col-xs-12 control-label employee-inputcol">Pay Rate per Hour $ :</label>
+                                                        <div class="col-xs-12">
+                                                            <input type="text" class="form-control" id="inputEmail3" placeholder="e.g. 8.5">
+                                                        </div>
+                                                    </div>
+													
+							</form>
+							
+							
 							<hr class="location-hr">
 							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-center center-block">
-                <a href="i9section-1-manager.html" class="btn btn-primary btn-md btnSearch">Previous</a>
-                <a href="i9section-1-review-manager.html" class="btn btn-primary btn-md btnSearch">Next</a>
+                <button onclick="location.href='preonboarding-manager.html'" class="btn btn-primary btn-md btnSearch">Save</button>
+                <button onclick="location.href='preonboarding-manager.html'" class="btn btn-warning btn-md btnSearch">Cancel</button>
             </div>
 					</div>
 				</div>
-                    
+                </div>
                 <!-- /Page Body -->
+				
             </div>
             <!-- /Page Content -->
-        </div>
-		<div class="footer">
-
+			<div class="footer">
     <h6 class="pull-left col-md-4 col-md-offset-3 col-lg-3 col-lg-offset-2 col-xs-5 col-sm-3">Version 0.01.00.162</h6>
     <h6 class="pull-right col-xs-6 col-md-4 col-sm-6 col-lg-3 col-lg-offset-2">Copyright © 2016 Beta Bulls. All Rights Reserved</h6>
 </div>
+        </div>
         <!-- /Page Container -->
         <!-- Main Container -->
-<!-- <div class="footer">
-	<h6 class="text-center">2016 &copy; PCROnboard. All Rights Reserved</h6>
-</div> -->
+
     </div>
 
     <!--Basic Scripts-->
@@ -700,49 +788,14 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <script src="assets/js/beyond.min.js"></script>
 
     <!--Page Related Scripts-->
-    <script src="assets/js/fuelux/wizard/wizard-custom.js"></script>
-    <script src="assets/js/toastr/toastr.js"></script>
-	<!--Page Related Scripts-->
-    <script src="assets/js/charts/easypiechart/jquery.easypiechart.js"></script>
-    <script src="assets/js/charts/easypiechart/easypiechart-init.js"></script>
-	<!--Page Related Scripts-->
-    <script src="assets/js/inputmask/jasny-bootstrap.min.js"></script>
-	<!--Bootstrap Date Picker-->
-    <script src="assets/js/datetime/bootstrap-datepicker.js"></script>
-	
-	<script>
-	//--Bootstrap Date Picker--
-        $('.date-picker').datepicker();
-	</script>
-    <script>
-        $(window).bind("load", function () {
-            /*Sets Themed Colors Based on Themes*/
-            themethirdcolor = getThemeColorFromCss('themethirdcolor');
-            InitiateEasyPieChart.init();
-        });
-    </script>
-	<script type="text/javascript">
-        jQuery(function ($) {
-            $('#WiredWizard').wizard().on('finished', function (e) {
-                Notify('Thank You! All of your information saved successfully.', 'bottom-right', '5000', 'fa-check', true);
-            });
-        });
-    </script>
-	
-	<script>
-	$("#hideform").hide();
-	$("#hideform2").hide();
-		$("#hideform-btn").click(function(){
-    $("#hideform").show();
-	$("#hideform3").hide();
-});
+    <script src="assets/js/fuelux/treeview/tree-custom.min.js"></script>
+    <script src="assets/js/fuelux/treeview/treeview-init.js"></script>
 
-$("#hideform-btn2").click(function(){
-    $("#hideform2").show();
-	$("#hideform").hide();
-	$("#hideform3").hide();
-});
-	</script>
+    <script>
+        jQuery(document).ready(function () {
+            UITree.init();
+        });
+    </script>
     
 </body>
 <!--  /Body -->
