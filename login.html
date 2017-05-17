@@ -122,11 +122,18 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
 		<script>
 		 $(document).ready(function() {
                 $("#Click").click(function(){
+
                 if ($('#user').val() == "superadmin@betabulls.com") {
                 	window.location.href = "index-superadmin.html";
                 }
+				else if ($('#user').val() == "client@betabulls.com") {
+                	window.location.href = "index-client.html";
+                }
 				else if ($('#user').val() == "employee@betabulls.com") {
                 	window.location.href = "i9categories.html";
+                }
+				else if ($('#user').val() == "manager@betabulls.com") {
+                	window.location.href = "index-manager.html";
                 }
                 	else {
                   window.location.href = "login.html";
