@@ -2036,7 +2036,7 @@ input[type=checkbox]~.text, input[type=radio]~.text {
     left: -23px !important;
 }
 }
-.instruction-pop a {background-color:#2dc3e8; color:#fff; padding:1px 8px; border-radius:20px;}
+.instruction-pop a {background-color:#2dc3e8; color:#fff; padding:3px 8px; border-radius:20px;}
 
 @media only screen and (max-width: 1024px) and (min-width: 769px){
  .instruction-pop input {    width: 75% !important;
