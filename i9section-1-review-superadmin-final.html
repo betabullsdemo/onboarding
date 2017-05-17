@@ -10,7 +10,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
 <!-- Head -->
 <head>
     <meta charset="utf-8" />
-    <title>VSI Form</title>
+    <title>I9 Section 1 - Review</title>
 
     <meta name="description" content="blank page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,6 +34,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <link href="assets/css/typicons.min.css" rel="stylesheet" />
     <link href="assets/css/animate.min.css" rel="stylesheet" />
     <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="assets/css/skins/azure.min.css" rel="stylesheet" />
     <link id="skin-link" href="" rel="stylesheet" type="text/css" />
 
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
@@ -47,14 +48,13 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
 	
 	input[type=checkbox]~.text, input[type=radio]~.text {margin-right:30px;}
 	.form-horizontal .form-group {margin-left:0px; margin-right:0px;}
-.page-sidebar .sidebar-menu li a {height:38px;}
+	
+	.instruction-pop input{width:85%; float:left; margin-right:10px;}
+	.popover {max-width:237px; left:742px;}
+	.page-sidebar .sidebar-menu li a {height:38px;}
 	.page-sidebar .sidebar-menu li a p {line-height:5px;}
-	.footer {
-    position: fixed;
-    height: 40px;
-    bottom: 0;
-    width: 100%; z-index:99999;
-}
+	
+
 	</style>
 </head>
 <!-- /Head -->
@@ -251,13 +251,13 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                             </li-->
                             <li>
                                 <a class="login-area dropdown-toggle" data-toggle="dropdown">
-                                <div class="avatar" title="View your public profile">
-                                    <img src="assets/img/avatars/adam-jansen.jpg">
-                                </div>
-                                <section>
-                                    <h2><span class="profile"><span id="ProfileName"></span>Super Admin</span></h2>
-                                </section>
-                            </a>
+                                    <div class="avatar" title="View your public profile">
+                                        <img src="assets/img/avatars/adam-jansen.jpg">
+                                    </div>
+                                    <section>
+                                        <h2><span class="profile"><span>Super Admin</span></span></h2>
+                                    </section>
+                                </a>
                                 <!--Login Area Dropdown-->
                                 <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
                                     <li class="username"><a>Super Admin</a></li>
@@ -341,7 +341,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
         <!-- Page Container -->
         <div class="page-container">
             <!-- Page Sidebar -->
-             <div class="page-sidebar" id="sidebar">
+                     <div class="page-sidebar" id="sidebar">
                 <!-- Page Sidebar Header-->
 				<div class="sidebar-header-wrapper">
         <div class="form-group" id="OnlyIndex">
@@ -550,7 +550,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill I9 Section-1</span><p style="font-size:10px;">(Due: 08/10/16)</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="vsi2-superadmin.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill VSI</span><p style="font-size:10px;">(Due: 01/10/16)</p>
                     </a>
@@ -590,7 +590,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Employee Sign</span><p style="font-size:10px;">(Due: 27/11/16)</p>
                     </a>
                 </li>
-				<li>
+				<li class="active">
                     <a href="i9section-1-review-superadmin-final.html">
                         <span class="menu-text"><i class="fa fa-file-text-o" style="margin-right:10px;"></i>Fill I9 Section-2</span><p style="font-size:10px;">(Due: 11/12/16)</p>
                     </a>
@@ -627,8 +627,8 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                             <i class="fa fa-home themeprimary"></i>
                             <a href="index-superadmin.html">Dashboard</a>
                         </li>
-                        
-                        <li class="active">VSI</li>
+                 
+                        <li class="active">I9 Section-1</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -636,7 +636,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <div class="page-header position-relative">
                     <div class="header-title">
                         <h1 class="themeprimary">
-                            VSI
+                            I9 Section-1: Review Information
                         </h1>
                     </div>
                     <!--Header Buttons-->
@@ -656,130 +656,174 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <!-- /Page Header -->
                 <!-- Page Body -->
                 <div class="page-body">
-    <div class="col-lg-12 col-sm-12 col-xs-12" style="padding:0px;">
-        <!-- <h5 class="row-title before-maincolor widget-caption">Add New Division</h5> -->
-        <div class="division-form">
-            <div class="col-md-12">
-                <form class="form-horizontal" role="form">
-                    <p class="main-color vsipara-top"><strong>Protected veteran</strong></p>
-                    <p class="main-color">This employer is subject to the Vietnam era Veterans' Readjustment Assistance Act 1974 (BEVRRA) as amended by the jobs for Beterans Act of 2002, which requires government contractors and sub contractors to take affirmative action to employ and advance in employment disabled veterans, recently seperated veterans, active duty wartime or campaign badge veterans, and Armed Forces service medal Veterans. As a government contractor subject to VEVVRA, the company is required to submit a report to the U.S. Department of Labor each year identifying the number of our employees who are protected veterans. If you believe you belong to any of the categories of protected veterans, please indicate by checking the appropriate box.<a href="#"><strong> Select this link to view the list of protected veterans </strong></a>(see list of protected veterans on next page for this link).</p>
-                    <div class="form-group">
-                        <div class="col-sm-9">
-                            <div class="control-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" class="inverted">
-                                        <span class="text main-color"><strong>Yes, I identify as one or more of classifications of protected veteran listed</strong></span>
-                                    </label>
+					<div class="col-lg-12 col-sm-12 col-xs-12" style="padding:0px;">
+                         <!-- <h5 class="row-title before-maincolor widget-caption">Add New Division</h5> -->
+							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 division-form">
+							<form class="form-horizontal" role="form">
+							<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<h5 class="personal-details"><strong>Personal Details</strong></h5>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">Full Legal Last Name (Family name or Surname) :</label>
+                                    <div class="col-sm-6 instruction-pop">
+										<input type="text" class="form-control" id="inputEmail3" placeholder="Carter">
+										<a href="javascript:void(0);" data-container="body" data-class="" data-toggle="popover-hover" data-placement="right" data-title="Instructions" data-content="If you have two last names or hyphenated last name, include both names in the last name field" data-original-title="" title="">
+                                                    ?
+                                                </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-12" style="margin-left:25px;">
-                            <div class="control-group">
-                                <div class="checkbox">
-                                    <label class="checkbox-margin">
-                                        <input type="checkbox" class="inverted">
-                                        <span class="text main-color"><strong>Disabled veteran</strong></span>
-                                    </label>
-                                    <label class="checkbox-margin">
-                                        <input type="checkbox" class="inverted">
-                                        <span class="text main-color"><strong>Recently seperated veteran</strong></span>
-                                    </label>
-                                    <label class="checkbox-margin">
-                                        <input type="checkbox" class="inverted">
-                                        <span class="text main-color"><strong>Active wartime or campaign badge veteran</strong></span>
-                                    </label>
-                                    <label class="checkbox-margin">
-                                        <input type="checkbox" class="inverted">
-                                        <span class="text main-color"><strong>Armed forces service medal veteran</strong></span>
-                                    </label>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">First Name (Given Name):</label>
+                                    <div class="col-sm-6">
+										<input type="email" class="form-control" id="inputEmail3" style="width:85%;" placeholder="John">
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <div class="control-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" class="inverted">
-                                        <span class="text main-color"><strong>I am a protected veteran, but i choose not to self-identify theclassification to which i belong</strong></span>
-                                    </label>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">Middle Initial :</label>
+                                    <div class="col-sm-6 instruction-pop">
+										<input type="text" class="form-control" id="inputEmail3" placeholder="St.">
+										<a href="javascript:void(0);" data-container="body" data-class="" data-toggle="popover-hover" data-placement="right" data-title="Instructions" data-content="First letter of your given second name or First letter of your middle name, if any." data-original-title="" title="">
+                                                    ?
+                                                </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <div class="control-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" class="inverted">
-                                        <span class="text main-color"><strong>I am not a protected veteran</strong></span>
-                                    </label>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">Other Names Used :</label>
+                                    <div class="col-sm-6 instruction-pop">
+										<input type="text" class="form-control" id="inputEmail3">
+										<a href="javascript:void(0);" data-container="body" data-class="" data-toggle="popover-hover" data-placement="right" data-title="Instructions" data-content="Provide all other names used (including maiden name). If you have had no other legal names, write 'N/A'." data-original-title="" title="">
+                                                    ?
+                                                </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <div class="control-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" class="inverted">
-                                        <span class="text main-color"><strong>I am not a veteran</strong></span>
-                                    </label>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">U.S. Social Security Number (9 digit SSN)  :</label>
+                                    <div class="col-sm-6 instruction-pop">
+										<input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "9" class="form-control" id="inputEmail3" placeholder="049-38-3855">
+										<a href="javascript:void(0);" data-container="body" data-class="" data-toggle="popover-hover" data-placement="right" data-title="Instructions" data-content="Providing your SSN is valuntary. If employer participates in E-Verify you must provide SSN" data-original-title="" title="">
+                                                    ?
+                                                </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group hr-btm15">
-                        <div class="col-sm-12">
-                            <div class="control-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" class="inverted">
-                                        <span class="text main-color"><strong>Decline to Answer</strong></span>
-                                    </label>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">Email Address (Optional)  :</label>
+                                    <div class="col-sm-6 instruction-pop">
+										<input type="text" class="form-control" id="inputEmail3" placeholder="stjohncarter@gmail.com">
+										<a href="javascript:void(0);" data-container="body" data-class="" data-toggle="popover-hover" data-placement="right" data-title="Instructions" data-content="Department of Homeland Security (DHS) may contact you if DHS learns of a potential mismatch between the information provided and information in DHS or Social Security Administration (SSA) records.Not willing to give this information write 'N/A'." data-original-title="" title="">
+                                                    ?
+                                                </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+								<div class="form-group col-sm-12" style="margin-bottom:20px;">
+                    <label for="inputEmail3" class="col-sm-6 col-md-6 col-lg-6 control-label no-padding-right">Date (MM/DD/YYYY) :</label>
+                    <div class="col-sm-6">
+                        
+                            <input class="form-control" type="text" placeholder="09/23/2016" disabled="disabled" style="width:85%;">
+                           
                     </div>
-                </form>
-                <hr class="location-hr">
-            </div>            
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-center center-block">
-                <button onclick='location.href="vsiform-superadmin.html"' class="btn btn-primary btn-md btnSearch">Previous</button>
-                <button onclick='location.href="vsi-review-superadmin.html"' class="btn btn-primary btn-md btnSearch">Next</button>
+                </div>
+							</div>
+							
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<h5 class="personal-details"><strong>Present Address</strong></h5>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">Street Number and Name :</label>
+                                    <div class="col-sm-6">
+										<input type="text" class="form-control" id="inputEmail3" placeholder="634 St Avenue">
+                                    </div>
+                                </div>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">Apartment Number (if applicable) :</label>
+                                    <div class="col-sm-6">
+										<input type="text" class="form-control" id="inputEmail3" placeholder="06F">
+                                    </div>
+                                </div>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">City or Town :</label>
+                                    <div class="col-sm-6">
+										<input type="text" class="form-control" id="inputEmail3" placeholder="Miami">
+                                    </div>
+                                </div>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">State :</label>
+                                    <div class="col-sm-6">
+										<select class="form-select form-control">
+                                        <option value="1">Alabama</option>
+                                        <option value="2">Alaska</option>
+                                        <option value="3">Arizona</option>
+                                        <option value="4">California</option>
+                                        <option value="5" selected>Florida</option>
+                                        <option value="6">Indiana</option>
+                                        <option value="7">New Jersey</option>
+                                        <option value="8">New York</option>
+
+                                    </select>
+                                    </div>
+                                </div>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">Zip Code :</label>
+                                    <div class="col-sm-6">
+										<input type="text" data-mask="99999" class="form-control" placeholder="33101">
+                                    </div>
+                                </div>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">Telephone Number (Mobile/Land Line) :</label>
+                                    <div class="col-sm-6">
+										<input type="text" data-mask="(999) 999-9999" class="form-control" placeholder="(973)232-7364">
+                                    </div>
+                                </div>
+							</div>
+							</div>
+							<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<h5 class="personal-details"><strong>Attestation</strong></h5>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">Citizenship :</label>
+                                    <div class="col-sm-6">
+										<a href="#">A citizen of the United States</a>
+                                    </div>
+                                </div>
+								<div class="form-group col-sm-12">
+									<label for="inputEmail3" class="col-sm-6 control-label no-padding-right">Form I-94 adminssion Number:</label>
+                                    <div class="col-sm-6">
+										<a href="#">3243746</a>
+                                    </div>
+                                </div>
+							</div>
+							</div>
+							</form>
+							<hr class="location-hr" />
+							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-center center-block">
+                <button onclick="location.href='signin-superadmin.html'" class="btn btn-primary btn-md btnSearch">Previous</button>
+                <button onclick="location.href='vsi-review-superadmin-final.html'" class="btn btn-primary btn-md btnSearch">Next</button>
             </div>
-        </div>
-    </div>
-</div>
+					</div>
+				</div>
+                    
+                <!-- /Page Body -->
+            </div>
             <!-- /Page Content -->
 			
         </div>
-		
-        <!-- /Page Container -->
-		<div class="footer" style="z-index:-1;">
+		<div class="footer">
+
     <h6 class="pull-left col-md-4 col-md-offset-3 col-lg-3 col-lg-offset-2 col-xs-5 col-sm-3">Version 0.01.00.162</h6>
     <h6 class="pull-right col-xs-6 col-md-4 col-sm-6 col-lg-3 col-lg-offset-2">Copyright © 2016 Beta Bulls. All Rights Reserved</h6>
 </div>
-		</div>
-		
+        <!-- /Page Container -->
         <!-- Main Container -->
 <!-- <div class="footer">
 	<h6 class="text-center">2016 &copy; PCROnboard. All Rights Reserved</h6>
 </div> -->
     </div>
+
     <!--Basic Scripts-->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/slimscroll/jquery.slimscroll.min.js"></script>
 
     <!--Beyond Scripts-->
-    <script src="assets/js/beyond.min.js"></script>
+    <script src="assets/js/beyond.js"></script>
 
     <!--Page Related Scripts-->
     <script src="assets/js/fuelux/wizard/wizard-custom.js"></script>
@@ -791,10 +835,13 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <script src="assets/js/inputmask/jasny-bootstrap.min.js"></script>
 	<!--Bootstrap Date Picker-->
     <script src="assets/js/datetime/bootstrap-datepicker.js"></script>
+	<!--Page Related Scripts-->
+    <script src="assets/js/toastr/toastr.js"></script>
 	
 	<script>
 	//--Bootstrap Date Picker--
         $('.date-picker').datepicker();
+		
 	</script>
     <script>
         $(window).bind("load", function () {
@@ -802,6 +849,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
             themethirdcolor = getThemeColorFromCss('themethirdcolor');
             InitiateEasyPieChart.init();
         });
+		
     </script>
 	<script type="text/javascript">
         jQuery(function ($) {
@@ -824,6 +872,10 @@ $("#hideform-btn2").click(function(){
 	$("#hideform").hide();
 	$("#hideform3").hide();
 });
+	</script>
+	
+	<script>
+	
 	</script>
     
 </body>
