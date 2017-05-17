@@ -819,7 +819,7 @@
                                                         Active
                                                     </td>
                                                     <td>
-                                                        manager01@pcr.com
+                                                        manager01@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -831,8 +831,8 @@
                                                         (342)478 3489
                                                     </td>
                                                     <td>
-                                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil-square-o editpopover"></i></a>
-                                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Delete"><i class="fa fa-trash-o deletepopover"></i> </a>
+                                                        <a href="editmanager-clientdashboard.html" class="" data-toggle="tooltip" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil-square-o editpopover"></i></a>
+                                                        <a href="#"  class="bootbox-confirm" data-toggle="tooltip" data-placement="top" data-original-title="Delete"><i class="fa fa-trash-o deletepopover"></i> </a>
                                                     </td>
                                                 </tr>
 
@@ -847,7 +847,7 @@
                                                         Active
                                                     </td>
                                                     <td>
-                                                        manager02@pcr.com
+                                                        manager02@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -875,7 +875,7 @@
                                                         Inactive
                                                     </td>
                                                     <td>
-                                                        manager03@pcr.com
+                                                        manager03@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -903,7 +903,7 @@
                                                         Active
                                                     </td>
                                                     <td>
-                                                        manager04@pcr.com
+                                                        manager04@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -965,7 +965,7 @@
                                                         Active
                                                     </td>
                                                     <td>
-                                                        manager01@pcr.com
+                                                        manager01@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -977,8 +977,8 @@
                                                         (342)478 3489
                                                     </td>
                                                     <td>
-                                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil-square-o editpopover"></i></a>
-                                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Delete"><i class="fa fa-trash-o deletepopover"></i> </a>
+                                                         <a href="editmanager-clientdashboard.html" class="" data-toggle="tooltip" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil-square-o editpopover"></i></a>
+                                                        <a href="#"  class="bootbox-confirm" data-toggle="tooltip" data-placement="top" data-original-title="Delete"><i class="fa fa-trash-o deletepopover"></i> </a>
                                                     </td>
                                                 </tr>
 
@@ -993,7 +993,7 @@
                                                         Active
                                                     </td>
                                                     <td>
-                                                        manager02@pcr.com
+                                                        manager02@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -1021,7 +1021,7 @@
                                                         Inactive
                                                     </td>
                                                     <td>
-                                                        manager03@pcr.com
+                                                        manager03@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -1049,7 +1049,7 @@
                                                         Active
                                                     </td>
                                                     <td>
-                                                        manager04@pcr.com
+                                                        manager04@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -1076,7 +1076,7 @@
                                                         Inactive
                                                     </td>
                                                     <td>
-                                                        manager08@pcr.com
+                                                        manager08@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -1103,7 +1103,7 @@
                                                         Active
                                                     </td>
                                                     <td>
-                                                        manager05@pcr.com
+                                                        manager05@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -1130,7 +1130,7 @@
                                                         Active
                                                     </td>
                                                     <td>
-                                                        manager09@pcr.com
+                                                        manager09@betabulls.com
                                                     </td>
                                                     <td>
                                                         Manager
@@ -1201,7 +1201,7 @@
     <!-- <script src="assets/js/charts/flot/jquery.flot.pie.js"></script>-->
     <script src="assets/js/charts/flot/jquery.flot.tooltip.js"></script>
     <script src="assets/js/charts/flot/jquery.flot.orderBars.js"></script>
-	
+	<script src="assets/js/bootbox/bootbox.js"></script>
 	
 	
 	<script>
@@ -1298,7 +1298,18 @@ $('.outtaHere').change(function(){
         });
             
     </script>
-	
+	<script>
+	$(document).ready(function () {
+		$(".bootbox-confirm").on('click', function () {
+            bootbox.confirm("Are you sure?", function (result) {
+                if (result) {
+                    //
+                }
+            });
+        });
+            
+        });
+	</script>
 	<script src="assets/js/charts/morris/raphael-2.0.2.min.js"></script>
     <script src="assets/js/charts/morris/morris.js"></script>
     <script src="assets/js/charts/morris/morris-init.js"></script>

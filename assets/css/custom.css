@@ -2013,3 +2013,51 @@ input[type=checkbox]~.text, input[type=radio]~.text {
 }
 .setting { display:none !important;}
 .instruction-pop a {background-color:#2dc3e8; color:#fff; padding:1px 8px; border-radius:20px;}
+.instruction-pop a {background-color:#2dc3e8; color:#fff; padding:1px 8px; border-radius:20px;}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px){
+ .instruction-pop input {    width: 75% !important;
+    float: left;
+    margin-right: 10px;}
+}
+@media only screen and (max-width: 768px) and (min-width: 426px){
+ .instruction-pop input {    width: 74% !important;
+    float: left;
+    margin-right: 10px;}
+}
+@media only screen and (max-width: 374px) and (min-width: 320px){
+ .instruction-pop input {    width: 82% !important;
+    float: left;
+    margin-right: 10px;}
+ 
+.popover {
+        max-width: 150px !important;
+    padding: 2px;
+    left: -23px !important;
+}
+}
+.instruction-pop a {background-color:#2dc3e8; color:#fff; padding:1px 8px; border-radius:20px;}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px){
+ .instruction-pop input {    width: 75% !important;
+    float: left;
+    margin-right: 10px;}
+ 
+}
+@media only screen and (max-width: 768px) and (min-width: 426px){
+ .instruction-pop input {    width: 74% !important;
+    float: left;
+    margin-right: 10px;}
+}
+@media only screen and (max-width: 374px) and (min-width: 320px){
+ .instruction-pop input {    width: 82% !important;
+    float: left;
+    margin-right: 10px;}
+ 
+.popover {
+        max-width: 150px !important;
+    padding: 2px;
+    left: -23px !important;
+}
+.instruction-pop {padding-top:10px }
+}
