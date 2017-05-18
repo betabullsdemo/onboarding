@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 BeyondAdmin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.6
 Version: 1.6.0
@@ -10,7 +10,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
 <!-- Head -->
 <head>
     <meta charset="utf-8" />
-    <title>Pre Onboarding</title>
+    <title>Edit Employee</title>
 
     <meta name="description" content="blank page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,23 +36,42 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <link href="assets/css/custom.css" rel="stylesheet" />
     <link id="skin-link" href="" rel="stylesheet" type="text/css" />
 	
-	<!--Page Related styles-->
-    <link href="assets/css/dataTables.bootstrap.css" rel="stylesheet" />
+	
 
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
     <script src="assets/js/skins.min.js"></script>
 	
 	<style>
-		.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {vertical-align:middle;}
-		
-		.table>tbody>tr>td a{margin:3px;}
-		
-		.table>thead>tr>th {background-color:#c1c1c1;}
+		::-webkit-input-placeholder {
+   color: #888 !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #888 !important;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #888 !important;  
+}
+
+:-ms-input-placeholder {  
+   color: #888;  
+}
 
 .form-horizontal .form-group {margin-bottom:8px;}
+.form-horizontal .control-label {text-align:left;}
 
-.well {overflow:hidden;}
-.DTTT {display:none;}
+
+.main-container {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+.footer {
+height: 4em;
+}
+
 	</style>
 </head>
 <!-- /Head -->
@@ -512,6 +531,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <!-- /Sidebar Menu -->
             </div>
             <!-- /Page Sidebar -->
+            
             <!-- Page Content -->
             <div class="page-content">
                 <!-- Page Breadcrumb -->
@@ -519,10 +539,12 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                     <ul class="breadcrumb">
                         <li>
                             <i class="fa fa-home themeprimary"></i>
-                            <a href="index-superadmin.html">Dashboard</a>
+                            <a href="index-manager.html">Dashboard</a>
                         </li>
-                        
-                        <li class="active">Pre Onboarding</li>
+                        <li>
+                            <a href="preonboarding-manager.html">Pre Onboarding</a>
+                        </li>
+                        <li class="active">Edit Employee</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -530,7 +552,7 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <div class="page-header position-relative">
                     <div class="header-title">
                         <h1 class="themeprimary">
-                            Pre Onboarding
+                            Edit Employee
                         </h1>
                     </div>
                     <!--Header Buttons-->
@@ -550,109 +572,202 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
                 <!-- /Page Header -->
                 <!-- Page Body -->
                 <div class="page-body">
-					<div class="col-lg-12 col-sm-12 col-xs-12 manage-division" style="padding:0px;">
-								<div class="well">
-								<a href="addemployee-manager.html"><button type="button" class="btn btn-md btn-primary pull-right">Add New Employee</button></a>
-								<div class="table-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <!-- <div class="header bg-default">
-                                    Pre Onboard
-                                </div> -->
-								
-								 <table class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="simpledatatable_info" id="simpledatatable">
-                                        <thead>
-                                            <tr role="row">
-                                                <th>
-                                                Employee Name
-                                            </th>
-                                            <th>
-                                                Location
-                                            </th>
-                                            <th>
-                                                Position
-                                            </th>
-											<th>
-                                                Contact Number
-                                            </th>
-											<th>
-                                                Start Date
-                                            </th>
-											<th>
-                                                Manager
-                                            </th>
-                                            <th>
-                                                Actions
-                                            </th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                James Abegglen
-												</td>
-												 <td>
-                                                New York
-												</td>
-												 <td>
-                                                Senior Manager
-												</td>
-												<td>
-													+1 (617) 634-6218
-												</td>
-												<td>
-													03-07-2016
-												</td>
-												 <td>
-                                                David Alward
-												</td>
-                                                <td>
-                                                    <a href="editemployee-manager.html" class="" data-toggle="tooltip" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil-square-o editpopover"></i></a>
-                                                    <a href="#" class="bootbox-confirm" data-toggle="tooltip" data-placement="top" data-original-title="Delete"><i class="fa fa-trash-o deletepopover"></i> </a>
-             <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Comment"><i class="fa fa-comment-o commentpopover"></i> </a>
-             <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Move to Onboard"><i class="fa fa-check-square-o onboardpopover"></i> </a>
-                                                </td>
-                                            </tr>
-											<tr>
-                                                <td>
-                                                Tom Bayer
-												</td>
-												 <td>
-                                                California
-												</td>
-												 <td>
-                                                Manager
-												</td>
-												<td>
-													+1 (617) 234-5267
-												</td>
-												<td>
-													25-07-2016
-												</td>
-												 <td>
-                                                David Alward
-												</td>
-                                                <td>
-                                                    <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil-square-o editpopover"></i></a>
-                                                    <a href="#" class="bootbox-confirm" data-toggle="tooltip" data-placement="top" data-original-title="Delete"><i class="fa fa-trash-o deletepopover"></i> </a>
-             <a href="#" class="" data-toggle="tooltip" data-placement="top" data-original-title="Comment"><i class="fa fa-comment-o commentpopover"></i> </a>
-             <a href="personalform.html" class="" data-toggle="tooltip" data-placement="top" data-original-title="Move to Onboard"><i class="fa fa-check-square-o onboardpopover"></i> </a>
-                                                </td>
-                                            </tr>
-										</tbody>
-                                    </table>
-									</div>
-																	
-								</div>
+					<div class="col-lg-12 col-sm-12 col-xs-12" style="padding:0px;">
+                         <!-- <h5 class="row-title before-maincolor widget-caption">Add New Division</h5> -->
+							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 division-form">
+							<form class="form-horizontal hidden-xs" role="form" style="margin-top:15px;">
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 control-label employee-inputcol" >Last Name (Family Name) :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" placeholder="Abegglen" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Division :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1">Division 1</option>
+																<option value="2" selected>Division 2</option>
+																<option value="3">Division 3</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 control-label employee-inputcol" >First Name (Given Name) :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" placeholder="James" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Reporting Manager :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1" selected>Reporting Manager 1</option>
+																<option value="2">Reporting Manager 2</option>
+																<option value="3">Reporting Manager 3</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 control-label employee-inputcol">Middle Name (Initial) :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label class="col-sm-4 col-sm-offset-2 control-label employee-inputcol">Suffix :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1">Jr.</option>
+																<option value="2" selected>Sr.</option>
+																<option value="3">I</option>
+																<option value="4">II</option>
+																<option value="5">III</option>
+																<option value="6">IV</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 control-label employee-inputcol">Location :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1">Alabama</option>
+																<option value="2">Alaska</option>
+																<option value="3" selected>California</option>
+																<option value="4">Colorado</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label for="inputEmail3" class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Job Title :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label for="inputEmail3" class="col-sm-5 col-sm-offset-1 control-label employee-inputcol">Email Address:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="email" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 margin-bottom no-padding-right">
+                                                        <label for="inputEmail3" class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Pay Rate per Hour $ :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3" placeholder="e.g. 8.5">
+                                                        </div>
+                                                    </div>
+													
+							</form>
+							
+							
+							<form class="form-horizontal hidden-md hidden-lg hidden-sm" role="form" style="margin-top:15px;">
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 control-label employee-inputcol" placeholder="Abegglen">Last Name (Family Name) :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Division :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1">Division 1</option>
+																<option value="2" selected>Division 2</option>
+																<option value="3">Division 3</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 control-label employee-inputcol" placeholder="James">First Name (Given Name) :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Reporting Manager :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1" selected>Reporting Manager 1</option>
+																<option value="2">Reporting Manager 2</option>
+																<option value="3">Reporting Manager 3</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 control-label employee-inputcol">Middle Name (Initial) :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label class="col-sm-4 col-sm-offset-2 control-label employee-inputcol">Suffix :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1">Jr.</option>
+																<option value="2" selected>Sr.</option>
+																<option value="3">I</option>
+																<option value="4">II</option>
+																<option value="5">III</option>
+																<option value="6">IV</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label class="col-sm-5 col-sm-offset-1 control-label employee-inputcol">Location :</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select form-control">
+																<option value="1">Alabama</option>
+																<option value="2">Alaska</option>
+																<option value="3" selected>California</option>
+																<option value="4">Colorado</option>
+															</select>
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 no-padding-right">
+                                                        <label for="inputEmail3" class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Job Title :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6">
+                                                        <label for="inputEmail3" class="col-sm-5 col-sm-offset-1 control-label employee-inputcol">Email Address:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="email" class="form-control" id="inputEmail3">
+                                                        </div>
+                                                    </div>
+													
+													<div class="form-group col-sm-12 col-md-6 col-lg-6 margin-bottom no-padding-right">
+                                                        <label for="inputEmail3" class="col-sm-4 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 control-label employee-inputcol">Pay Rate per Hour $ :</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="inputEmail3" placeholder="e.g. 8.5">
+                                                        </div>
+                                                    </div>
+													
+							</form>
+							
+							
+							<hr class="location-hr">
+							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-center center-block">
+                <button onclick="location.href='preonboarding-manager.html'" class="btn btn-primary btn-md btnSearch">Save</button>
+                <button onclick="location.href='preonboarding-manager.html'" class="btn btn-warning btn-md btnSearch">Cancel</button>
+            </div>
+					</div>
 				</div>
                 </div>
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-			<div class="footer">
-
-    <h6 class="pull-left col-md-4 col-md-offset-3 col-lg-3 col-lg-offset-2 col-xs-5 col-sm-3">Version 0.01.00.162</h6>
-    <h6 class="pull-right col-xs-6 col-md-4 col-sm-6 col-lg-3 col-lg-offset-2">Copyright © 2016 Beta Bulls. All Rights Reserved</h6>
-</div>
         </div>
         <!-- /Page Container -->
         <!-- Main Container -->
@@ -668,45 +783,15 @@ Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB0
     <script src="assets/js/beyond.min.js"></script>
 
     <!--Page Related Scripts-->
-    <script src="assets/js/datatable/jquery.dataTables.min.js"></script>
-    <script src="assets/js/datatable/ZeroClipboard.js"></script>
-    <script src="assets/js/datatable/dataTables.tableTools.min.js"></script>
-    <script src="assets/js/datatable/dataTables.bootstrap.min.js"></script>
-    <script src="assets/js/datatable/datatables-init.js"></script>
-	<script src="assets/js/bootbox/bootbox.js"></script>
+    <script src="assets/js/fuelux/treeview/tree-custom.min.js"></script>
+    <script src="assets/js/fuelux/treeview/treeview-init.js"></script>
+
     <script>
-	$(document).ready(function ()
-        {
-            $('.deletepopover').click(function () {
-                <!-- $('#sidebar').css('z-index', '0'); -->
-                $('.navbar').css('z-index', '200');
-            });
-			
-			$('.deactivatepopover').click(function () {
-               <!--  $('#sidebar').css('z-index', '0'); -->
-                $('.navbar').css('z-index', '200');
-            });
-
-
+        jQuery(document).ready(function () {
+            UITree.init();
         });
-	
-        InitiateSimpleDataTable.init();
-        InitiateEditableDataTable.init();
-        InitiateExpandableDataTable.init();
-        InitiateSearchableDataTable.init();
     </script>
-	<script>
-	$(document).ready(function () {
-		$(".bootbox-confirm").on('click', function () {
-            bootbox.confirm("Are you sure?", function (result) {
-                if (result) {
-                    //
-                }
-            });
-        });
-            
-        });
-	</script>
+    
 </body>
 <!--  /Body -->
 </html>
